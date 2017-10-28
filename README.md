@@ -1,2 +1,3 @@
 # dotfiles
-various dotfiles for inits, macros, scripts, etc.
+
+Various dotfiles for inits, macros, scripts, etc.
