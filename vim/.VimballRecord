@@ -1,0 +1,2 @@
+twitvim-0.8.0.vmb: call delete('/home/umut/.vim//plugin/twitvim.vim')|call delete('/home/umut/.vim//doc/twitvim.txt')
+screen.vba: call delete('/home/umut/.vim//autoload/screen.vim')|call delete('/home/umut/.vim//doc/screen.txt')|call delete('/home/umut/.vim//plugin/screen.vim')

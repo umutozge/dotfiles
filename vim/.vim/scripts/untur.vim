@@ -1,0 +1,12 @@
+iu ,o
+iu ,O
+iu ,C
+iu ,c
+iu ,i
+iu ,I
+iu ,s
+iu ,S
+iu ,U
+iu ,u
+iu ,G
+iu ,g

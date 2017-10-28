@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/umut/Dropbox/Turkish-Indefinite-Team/Annotation/Analysis/phase4'
+let g:netrw_dirhist_2='/home/umut/Dropbox/Turkish-Indefinite-Team/Annotation/Analysis/phase4/dur'
+let g:netrw_dirhist_3='/home/umut/tmp'
+let g:netrw_dirhist_4='/home/umut/Dropbox'
+let g:netrw_dirhist_5='/home/umut/Dropbox/mn'
+let g:netrw_dirhist_6='/home/umut/Dropbox/res/cr/2016-Fall/cogs501-2016-Fall/hw'
+let g:netrw_dirhist_7='/home/umut/Dropbox/res/cr/2016-Fall/cogs501-2016-Fall/hw/01'
