@@ -5,6 +5,9 @@ endif
 
 let b:did_ftplugin = 1
 
+"set colors
+colorscheme zenburn
+
 "turn on spell check
 setlocal spell
 
@@ -73,8 +76,8 @@ noremap <buffer> <localleader>if i\begin{frame}<CR><CR>\end{frame}<Esc>?begin{fr
 
 "for adding 'draft' to the options of the document class
 "useful for beamer
-noremap <buffer> <localleader>d <Esc>?documentclass<CR>f]i,draft<Esc>''
-noremap <buffer> <localleader>,d <Esc>?draft]<CR>dawhx<Esc>''
+noremap <buffer> <localleader>dr <Esc>?documentclass<CR>f]i,draft<Esc>''
+noremap <buffer> <localleader>,udr <Esc>?draft]<CR>dawhx<Esc>''
 
 "Lecture notes
 noremap <buffer> <localleader>hl /labelf{lvf}hy/end{uexerciseO\hyperlink{pasol}{\qed}O

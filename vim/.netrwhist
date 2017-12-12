@@ -1,9 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/umut/Dropbox/res/cr/2017-Spring/cogs-501'
-let g:netrw_dirhist_2='/etc/X11'
-let g:netrw_dirhist_3='/home/umut/Dropbox/mn/lt/750'
-let g:netrw_dirhist_4='/home/umut/tmp.koc/adj.nvn.Exp3/adult.Exp3/raw'
-let g:netrw_dirhist_5='/home/umut/Dropbox/lib/dotfiles/.mytex/tex/latex/umut'
-let g:netrw_dirhist_6='/home/umut/.emacs.d'
-let g:netrw_dirhist_7='/home/umut/Annotation/Analysis/phase4/main/m4.01'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/umut/Annotation/Analysis/phase2/compare-all-acc/nagihan'
+let g:netrw_dirhist_2='/home/umut/Annotation/Analysis/phase2/compare-all-acc'
+let g:netrw_dirhist_3='/home/umut/Dropbox/res/cr/dev/tl'
+let g:netrw_dirhist_4='/home/umut/Dropbox/lib/dotfiles/.mytex/tex/latex/umut'

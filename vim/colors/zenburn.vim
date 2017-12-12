@@ -136,10 +136,9 @@
 " TODO
 "   - Visual alternate color is broken? Try GVim >= 7.0.66 if you have trouble
 "   - IME colouring (CursorIM)
-
 " Set defaults, but keep any parameters already set by the user
 if ! exists("g:zenburn_high_Contrast")
-    let g:zenburn_high_Contrast = 0
+    let g:zenburn_high_Contrast = 1
 endif
 
 if ! exists("g:zenburn_color_also_Ignore")

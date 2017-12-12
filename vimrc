@@ -9,7 +9,6 @@ set runtimepath=~/.vim/,$VIMRUNTIME
 " path quickly
 set path=~/.mytex/**,~/res/**,~/.vim/,~/bin/**
 
-
 filetype plugin on
 syn on
 
@@ -24,16 +23,12 @@ set tabstop=4
 set wildmode=longest,list,full
 set wildmenu
 set viminfo+=f1
-set nohlsearch
-set showtabline=0
 set incsearch
 
 "global key bindings
 
 nnoremap <Space> <Right>
 nnoremap <TAB> 0i<TAB><ESC>
-nnoremap <C-U> <PageUp>
-nnoremap <C-D> <PageDown>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 
@@ -43,10 +38,28 @@ inoremap {} {}<Esc>i
 inoremap [] []<Esc>i
 inoremap <> <><Esc>i
 
+
+"" edit vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
+"" source vimrc
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+"" append selection to a scratch file
+vnoremap <leader>as y:call writefile(split(@0,'\n'),'.scratch')<CR>
+"y:w! >> ~/.scratch<CR>
+"" view scratch
+nnoremap <leader>vs :vsplit ~/.scratch<CR>
+
 "" various ways of inserting dates
 nnoremap <leader>id  :r!date +\%Y\%m\%d
+nnoremap <leader>idr :r!date +\%b\%t\%d\%t\%Y
+nnoremap <leader>idd  :r!date +\%Y\%m\%d\%t\%a
 nnoremap <leader>idt :r!date +'\%a, \%d \%b \%y -- \%H:\%M'
-nnoremap <leader>idd :r!date +\%F
+nnoremap <leader>idh :r!date +\%F
+
+
+" mutt starts vim global settings, so this is for switching to mutt-mode
+nnoremap <leader>mm :set textwidth=0<CR>:colors zenburn<CR>
 
 "locally change to the directory of the current file
 noremap <leader>cd :lcd %:p:h<CR>
@@ -63,4 +76,20 @@ nnoremap <leader>rp %x``x
 "word count the selection
 vnoremap <leader>wc y:!echo '<C-R>"'\|wc -w 
 
-"hi SpellBad ctermfg=white ctermbg=red
+hi SpellBad ctermfg=white ctermbg=red
+
+"remove leading white space in selection
+vnoremap <leader>rs :s/^\s\+//g<CR>
+
+"auto commands
+
+augroup python
+	autocmd!
+	autocmd FileType python iabbrev <buffer> iff if:<left>
+	autocmd FileType python iabbrev <buffer> forr for:<left>
+	autocmd FileType python iabbrev <buffer> eliff elif:<left>
+augroup END
+
+augroup markdown
+	autocmd FileType markdown colorscheme zenburn 
+augroup END
