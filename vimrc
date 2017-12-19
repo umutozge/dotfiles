@@ -27,8 +27,8 @@ set incsearch
 
 "global key bindings
 
-nnoremap <Space> <Right>
 nnoremap <TAB> 0i<TAB><ESC>
+inoremap jk <ESC>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 
@@ -92,4 +92,15 @@ augroup END
 
 augroup markdown
 	autocmd FileType markdown colorscheme zenburn 
+augroup END
+
+augroup latex
+	autocmd!
+	autocmd FileType tex inoremap <buffer> ;; <C-c>:!setxkbmap -layout tr<CR>i<right>
+	autocmd FileType tex inoremap <buffer> şş <C-c>:!setxkbmap -layout us<CR>i<right>
+augroup END
+
+augroup ccg
+	autocmd!
+	autocmd BufNewFile,BufRead *.ccg nnoremap <buffer> <localleader>i :vsplit inspect<CR>:set paste<CR><C-a>>:read /tmp/screen-exchange<CR>:set nopaste<CR>
 augroup END
