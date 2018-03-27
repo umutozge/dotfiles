@@ -1,0 +1,173 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2011.10.4)  7 FEB 2012 16:55
+entering extended mode
+**sdrt.sty
+(/afs/inf.ed.ac.uk/user/v/v1uozge2/.mytex/tex/latex/sdrt/sdrt.sty
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `sdrt'.
+
+Package: sdrt 2008/04/02 Package for typesetting Discourse Representation Theor
+y and formal semantics in general
+(/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/afs/inf.ed.ac.uk/user/v/v1uozge2/.mytex/tex/latex/umut/xyling.sty
+(/usr/share/texmf/tex/generic/xypic/xy.sty
+(/usr/share/texmf/tex/generic/xypic/xy.tex Bootstrap'ing: catcodes, docmode,
+(/usr/share/texmf/tex/generic/xypic/xyrecat.tex)
+(/usr/share/texmf/tex/generic/xypic/xyidioms.tex)
+
+ Xy-pic version 3.7 <1999/02/16>
+ Copyright (c) 1991-1998 by Kristoffer H. Rose <krisrose@ens-lyon.fr>
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state,
+\X@c=\dimen102
+\Y@c=\dimen103
+\U@c=\dimen104
+\D@c=\dimen105
+\L@c=\dimen106
+\R@c=\dimen107
+\Edge@c=\toks14
+\X@p=\dimen108
+\Y@p=\dimen109
+\U@p=\dimen110
+\D@p=\dimen111
+\L@p=\dimen112
+\R@p=\dimen113
+\Edge@p=\toks15
+\X@origin=\dimen114
+\Y@origin=\dimen115
+\X@xbase=\dimen116
+\Y@xbase=\dimen117
+\X@ybase=\dimen118
+\Y@ybase=\dimen119
+\X@min=\dimen120
+\Y@min=\dimen121
+\X@max=\dimen122
+\Y@max=\dimen123
+\lastobjectbox@=\box26
+\zerodotbox@=\box27
+\almostz@=\dimen124
+ direction,
+\d@X=\dimen125
+\d@Y=\dimen126
+\K@=\count79
+\KK@=\count80
+\Direction=\count81
+\K@dXdY=\dimen127
+\K@dYdX=\dimen128
+\xyread@=\read1
+\xywrite@=\write3
+\csp@=\count82
+\quotPTK@=\dimen129
+
+utility macros; pictures: \xy, positions,
+\swaptoks@@=\toks16
+\connectobjectbox@@=\box28
+ objects,
+\styletoks@=\toks17
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+Package: xy 1999/02/16 Xy-pic version 3.7
+
+(/usr/share/texmf/tex/generic/xypic/xycolor.tex
+ Xy-pic option: Colour extension v.3.3 loaded)
+(/usr/share/texmf/tex/generic/xypic/xyall.tex
+ Xy-pic option: All features v.3.3
+(/usr/share/texmf/tex/generic/xypic/xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.7 curve,
+\crv@cnt@=\count83
+\crvpts@=\toks18
+\splinebox@=\box29
+\splineval@=\dimen130
+\splinedepth@=\dimen131
+\splinetol@=\dimen132
+\splinelength@=\dimen133
+ circles,
+\L@=\dimen134
+ loaded)
+(/usr/share/texmf/tex/generic/xypic/xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.7 loaded)
+(/usr/share/texmf/tex/generic/xypic/xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.3
+(/usr/share/texmf/tex/generic/xypic/xytips.tex
+ Xy-pic option: More Tips extension v.3.3 loaded) loaded)
+(/usr/share/texmf/tex/generic/xypic/xyline.tex
+ Xy-pic option: Line styles extension v.3.6
+\xylinethick@=\dimen135
+ loaded)
+(/usr/share/texmf/tex/generic/xypic/xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.3 loaded)
+(/usr/share/texmf/tex/generic/xypic/xymatrix.tex
+ Xy-pic option: Matrix feature v.3.4
+\Row=\count84
+\Col=\count85
+\queue@=\toks19
+\queue@@=\toks20
+\qcount@=\count86
+\qcount@@=\count87
+\matrixsize@=\count88
+ loaded)
+(/usr/share/texmf/tex/generic/xypic/xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.5 path, \ar, loaded)
+(/usr/share/texmf/tex/generic/xypic/xygraph.tex
+ Xy-pic option: Graph feature v.3.7 loaded) loaded))
+(/usr/share/texmf/tex/generic/xypic/xycrayon.tex
+ Xy-pic option: Crayola Colours v.3.3 loaded)
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count89
+))
+\c@PXcnt=\count90
+\TXTwidth=\skip41
+\GLOSSwidth=\skip42
+\PGwidth=\skip43
+)
+(/afs/inf.ed.ac.uk/user/v/v1uozge2/.mytex/tex/latex/var/xytree.sty
+Package: xytree 2006/8/15 Pacakge for drawing trees
+
+`xytree.sty' package v1.5 for drawing trees.
+\rowheight=\dimen136
+\XyColumnSpacing=\dimen137
+\drs@wd=\dimen138
+\drs@ht=\dimen139
+\drsboxsep=\dimen140
+\drs@boxa=\box30
+\drs@boxb=\box31
+))
+*
+! Emergency stop.
+<*> sdrt.sty
+            
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 3049 strings out of 94500
+ 33086 string characters out of 1176766
+ 121712 words of memory out of 1000000
+ 6241 multiletter control sequences out of 10000+50000
+ 4783 words of font info for 21 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 32i,0n,26p,296b,20s stack positions out of 1500i,500n,5000p,200000b,5000s
+PDF statistics:
+ 0 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 1 words of extra memory for PDF output out of 65536
+No pages of output.

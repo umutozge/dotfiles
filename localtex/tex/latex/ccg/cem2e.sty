@@ -1,0 +1,71 @@
+% cem2e.sty -- my abbreviations for latex 2e
+
+% to avoid bloody indents after examples and displays. -thanks Markus Kohm! 
+% needs lingmacros.sty
+
+\newcommand{\myenum}[1]{%
+  %\clearpage
+  \noindent\expandafter\ignorespaces\enumsentence{#1}
+  \par
+  \csname @afterindentfalse\endcsname
+  \csname @afterheading\endcsname
+}
+
+\newcommand{\myeenum}[1]{%
+  %\clearpage
+  \noindent\expandafter\ignorespaces\eenumsentence{#1}
+  \par
+  \csname @afterindentfalse\endcsname
+  \csname @afterheading\endcsname
+}
+
+\newcommand{\fixafterindent}{\par\csname @afterindentfalse\endcsname
+                \csname @afterheading\endcsname}
+
+\newcommand{\cb}{Cem Boz\c{s}ahin}
+\newcommand{\nb}[1]{\marginpar[\hfill$\Rightarrow$]{\hfill$\Leftarrow$}
+[\textbf{NB:}#1]}
+\newcommand{\taunp}{\ensuremath{\cgf{NP}_\tau}}
+\newcommand{\sigmanp}{\ensuremath{\cgf{NP}_\sigma}}
+\newcommand{\pinp}{\ensuremath{\cgf{NP}_\pi}}
+\newcommand{\grf}[1]{\ensuremath{\mathcal{#1}}} % font for gram roles S A P
+\newcommand{\gra}{\ensuremath{\mathcal{A}}}     % A as gr
+\newcommand{\grs}{\ensuremath{\mathcal{S}}}     % S as gr
+\newcommand{\grp}{\ensuremath{\mathcal{P}}}     % P as gr
+%\newcommand{\grsa}{\ensuremath{\mathcal{S}\!\!=\!\!\!\mathcal{A}\,}} % S=A as gr
+%\newcommand{\grsp}{\ensuremath{\mathcal{S}\!\!=\!\!\mathcal{P}\,}}  % S=P as gr
+\newcommand{\grsa}{\grs=\gra} % S=A as gr
+\newcommand{\grsp}{\grs=\grp}  % S=P as gr
+
+\newcommand{\texf}{\emph} % font for in-text examples.
+\newcommand{\exf}[1]{\mbox{\normalfont\textsl{#1}}}  % font for ling examples
+\newcommand{\semfnt}[1]{\ensuremath{\mathit{#1}}} % font for semantic objects 
+\newcommand{\so}[1]{\ensuremath{\semfnt{#1'}}}    % semantic objects in any En
+\newcommand{\soo}[2]{\semfnt{#1}^{#2}}  % typed sem object
+\newcommand{\sem}[1]{\ensuremath{\colon #1}}   % :y part of x:y notation
+\newcommand{\jux}{\ensuremath{\cdot}}                 % juxtaposition operator
+\newcommand{\lbr}{\ensuremath{\left[\right.}}         % left brace
+\newcommand{\rbr}{\ensuremath{\left.\right]}}         % right brace
+\newcommand{\lbrl}[1]{\lbr\ensuremath{_{\mathrm{#1}}}} % [_label
+\newcommand{\rbrl}[1]{\rbr\ensuremath{_{\mathrm{#1}}}} % ]_label
+
+\newcommand{\mc}[2]                     % centered multicolumn, 
+  {\multicolumn{#1}{c}{#2}}             % #1 = no. of columns, #2 = body.
+\newcommand{\mcl}[2]                    % left adjusted multicolumn, 
+  {\multicolumn{#1}{l}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\mcr}[2]                    % right adjusted multicolumn, 
+  {\multicolumn{#1}{r}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\cggloss}[1]
+  {\\[1.5ex] \mc{#1}}
+
+\newcommand{\xref}[1]{~(\ref{#1})}
+\newcommand{\xreff}[2]{~(\ref{#1}#2)}
+\providecommand{\bi}{\begin{itemize}}
+\providecommand{\ei}{\end{itemize}}
+
+
+
+\newcommand{\shortx}[2]{\begin{list}{}{\setlength{\leftmargin}{0em}}
+                           \item[] {#1}\item[] {#2}
+                        \end{list}}     % for gloss-only examples 
+

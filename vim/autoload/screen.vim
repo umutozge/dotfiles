@@ -520,7 +520,7 @@ function! s:ScreenQuit(owner, onleave)
     let result = s:screen{g:ScreenImpl}.close(a:owner)
   endif
 
-  unlet g:ScreenShellTmuxPane
+  "unlet g:ScreenShellTmuxPane
 
   if v:shell_error
     if result !~ 'No screen session found'

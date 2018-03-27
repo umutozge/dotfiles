@@ -1,0 +1,319 @@
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.5.21)  23 FEB 2011 16:59
+entering extended mode
+**synttree.dtx
+(./synttree.dtx
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 1999/08/08 v2.0u Standard LaTeX documentation class
+*************************************
+* Local config file ltxdoc.cfg used
+*************************************
+(/usr/share/texmf/tex/latex/base/ltxdoc.cfg
+File: ltxdoc.cfg 2001/06/05 v1.0 teTeX: LaTeX documentation setup
+)
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/base/doc.sty
+Package: doc 2004/02/09 v2.1b Standard LaTeX documentation package (FMi)
+\c@StandardModuleDepth=\count87
+\guard@level=\count88
+\MacrocodeTopsep=\skip43
+\MacroIndent=\dimen103
+\macro@cnt=\count89
+\MacroTopsep=\skip44
+\index@excludelist=\toks14
+
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
+\c@tracingmulticols=\count90
+\mult@box=\box26
+\multicol@leftmargin=\dimen104
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
+\full@width=\dimen105
+\page@free=\dimen106
+\premulticols=\dimen107
+\postmulticols=\dimen108
+\multicolsep=\skip45
+\multicolbaselineskip=\skip46
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+\IndexMin=\dimen112
+\c@IndexColumns=\count98
+\GlossaryMin=\dimen113
+\c@GlossaryColumns=\count99
+\check@sum=\count100
+\bslash@cnt=\count101
+\wrong@table=\toks15
+\c@CodelineNo=\count102
+)) (./synttree.sty
+\MTr@level=\count103
+\MTr@numchildren=\count104
+\MTr@maxlevel=\count105
+\MTr@mybranchmult=\count106
+\MTr@labelbox=\box52
+\MTr@treebox=\box53
+\MTr@treev=\count107
+\MTr@treew=\count108
+\MTr@treeheight=\count109
+\MTr@treedepth=\count110
+\MTr@branchmult=\count111
+\MTr@labeldepth=\count112
+\MTr@labelheight=\count113
+\MTr@labelhalfwidth=\count114
+\MTr@morex=\count115
+\MTr@parenty=\count116
+\MTr@picwidth=\count117
+\MTr@picheight=\count118
+\MTr@templength=\skip47
+\MTr@loopcnta=\count119
+\MTr@tempcnta=\count120
+\MTr@tempcntb=\count121
+\MTr@tempcntc=\count122
+\MTr@branchheight=\count123
+\MTr@trianglemultright=\count124
+\MTr@trianglemultleft=\count125
+\MTr@lineoffset=\count126
+\MTr@minheight=\skip48
+\MTr@childsidesep=\count127
+\MTr@childattachsep=\count128
+)
+\@indexfile=\write3
+\openout3 = `synttree.idx'.
+
+
+Writing index file synttree.idx
+\@glossaryfile=\write4
+\openout4 = `synttree.glo'.
+
+Writing glossary file synttree.glo 
+(./synttree.aux)
+\openout1 = `synttree.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+Package doc Info: Made | a short reference for \verb on input line 59.
+ (./synttree.dtx
+***************************
+* Character table correct *
+***************************
+Package doc Info: Made " a short reference for \verb on input line 65.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 71.
+(./synttree.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+)
+\tf@toc=\write5
+\openout5 = `synttree.toc'.
+
+ [1
+
+{/usr/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\MTr@childibox=\box54
+\MTr@childix=\count129
+\MTr@childiy=\count130
+\MTr@childiv=\count131
+\MTr@childiw=\count132
+\MTr@childiheight=\count133
+\MTr@childidepth=\count134
+\MTr@childibranchmult=\count135
+\MTr@childipicheight=\count136
+\MTr@childitriangle=\count137
+\MTr@childiibox=\box55
+\MTr@childiix=\count138
+\MTr@childiiy=\count139
+\MTr@childiiv=\count140
+\MTr@childiiw=\count141
+\MTr@childiiheight=\count142
+\MTr@childiidepth=\count143
+\MTr@childiibranchmult=\count144
+\MTr@childiipicheight=\count145
+\MTr@childiitriangle=\count146
+
+[2
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!]
+\MTr@childiiibox=\box56
+\MTr@childiiix=\count147
+\MTr@childiiiy=\count148
+\MTr@childiiiv=\count149
+\MTr@childiiiw=\count150
+\MTr@childiiiheight=\count151
+\MTr@childiiidepth=\count152
+\MTr@childiiibranchmult=\count153
+\MTr@childiiipicheight=\count154
+\MTr@childiiitriangle=\count155
+ [3
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored!] [4] [5] [6] [7] [8] [9] [10] [11] [12]
+Overfull \hbox (28.93738pt too wide) in paragraph at lines 888--888
+ [][]    \OT1/cmtt/m/n/9 \global\setbox\MTr@treebox\hbox{\MTr@outputchildren{\t
+he\MTr@numchildren}}% 
+ []
+
+[13]
+Overfull \hbox (52.5621pt too wide) in paragraph at lines 935--935
+ [][]      \OT1/cmtt/m/n/9 %\put(-\MTr@treev,-\MTr@picheight){\framebox(\MTr@pi
+cwidth,\MTr@picheight){}}% 
+ []
+
+[14]
+*******************
+* Checksum passed *
+*******************
+No file synttree.ind.
+No file synttree.gls.
+) [15] (./synttree.aux) ) 
+Here is how much of TeX's memory you used:
+ 709 strings out of 94500
+ 8841 string characters out of 1176766
+ 61384 words of memory out of 1000000
+ 3919 multiletter control sequences out of 10000+50000
+ 10484 words of font info for 38 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 30i,9n,21p,242b,343s stack positions out of 1500i,500n,5000p,200000b,5000s
+PDF statistics:
+ 105 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 1 words of extra memory for PDF output out of 65536
+</usr/share/texmf/fonts/type1/bluesky/cm/cmti7.pfb></u
+sr/share/texmf/fonts/type1/bluesky/cm/cmti10.pfb></usr/share/texmf/fonts/type1/
+bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/blue
+sky/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/
+texmf/fonts/type1/bluesky/cm/cmsy6.pfb></usr/share/texmf/fonts/type1/bluesky/cm
+/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx10.pfb></usr/share/texm
+f/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
+tt9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr9.pfb></usr/share/texmf/fon
+ts/type1/bluesky/cm/cmbx9.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pf
+b></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/ty
+pe1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmtt12.pfb><
+/usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on synttree.pdf (15 pages, 155941 bytes).

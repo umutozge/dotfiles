@@ -1,0 +1,148 @@
+\documentclass[a4paper,11pt]{metu}
+\usepackage[latin5]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{layout}
+
+% One essential package for including graphics.
+\usepackage{graphicx}
+
+% comment-out following for pdf output with pdflatex. creates hyperlinks
+% from toc
+% page, figure and table references, and citations. Changes colors of
+% hyperlinked text, may be not suitable for official printing. See
+% hyperref.sty documentation for changing colors.
+%\usepackage{hyperref}
+
+% The following is a nice package if you want to include source code
+% segments in your thesis. It pretty prints your source for many languages
+% see its documentation
+%\usepackage{listings}
+
+% The following is a environment definition to show how you can define new
+% labeled and referencable environments. In introduction chapter it is
+% used. Just comment out this and the environment use in introduction chapter
+% in order to see how it works.
+
+%\newcounter{definition}[chapter]
+%\makeatletter
+%\newenvironment{definition}
+%{\stepcounter{definition}
+%  \def\@currentlabel{Dfn.~\thechapter.\thedefinition}
+% \begin{flushright}\begin{singlespace}
+% \begin{minipage}[t]{0.95\linewidth}\hrule\ \\
+% \textbf{Definition \thechapter.\thedefinition}\\}
+%{\\\hrule\end{minipage}\end{singlespace}\end{flushright}\vspace{1em}}
+%\makeatother
+
+
+
+\input{preambl}
+
+\begin{document}
+
+\begin{preliminaries}
+\maketitle
+\makenewapproval
+\makeplagiarismpage
+\begin{abstract}
+I reverently believe that the maker who made us all  makes everything in New
+England, but the weather.  I don't know who makes that, but I think it must be
+raw apprentices in the weather-clerks factory who experiment and learn how, in
+New England, for board and clothes, and then are promoted to make weather for
+countries that require a good article, and will take their custom elsewhere
+if they don't get it.
+
+You will be given a post of trust and responsibility.
+Beware of a dark-haired man with a loud tie.
+You will be audited by the Internal Revenue Service.
+\end{abstract}
+
+\begin{oz}
+Film bir detektifin bir seri cinayet failinin peþine düþmesi ile baþlýyor.
+Fakat dedektif öykünün daha 20.sýnda seri cinayetlerin diðer kurbanlarý
+gibi kýzýl saçlý orta yaþlý ve gözlüklü olduðu için katil tarafýndan öldürülüyor ve
+öykü kahramansýz kalýyor. Ýkinci öyküde Agatha Cristie romanlarýna bir gönderme
+yapýlmýþ. Bir intihar olayýný araþtýrmaya baþlayan müfettiþ Zuarro zekasý ver
+kurnazlýðý sayesinde katili buluyor. Ýdam cezasýna çarptýrýlan katil öldükten sonra
+slýnda katilin bu kiþi olmadýðý, ölen kiþinin baþka bir tanýdýðý olduðu anlaþýlýyor. Bu
+þekilde 3 kiþi daha ipe gönderildikten sonra intiharýn sözcük anlamýndan da
+anlaþýlabileceði gibi cinayet olmadýðý anlaþýlýyor. Sinema otoriteleri bu öyküde
+yönetmenin sinemaseverleri Agatha Cristie tarzý dedektiflerden tik\-sin\-dir\-me\-yi
+amaçladýðýný ileri sürüyor.
+
+Filmin ilk öykü sonrasýnda kameramanýn deli danalar gibi Manchaster sokaklarýnda
+yeni bir kahraman aradýðý ve boþluða düþüp bunalýma girdiði sahnesi sinema tarihinin en
+kurgusuz ve özgür sahnesi olarak kabul ediliyor. Kameramanýn  üzerinden geçen iki katlý
+otobüsün kameramaný eziþ sesi ise sinema tarihinin en özgün cýrk sesi...
+Sýradýþý yönetmenin bu üçlemesi iki öyküden oluþuyor. Yönetmenin film hakkýnda yapýlan
+eleþtirilere verdiði ``Ne yani üçleme dedik diye üç film mi çekicez!'' demeci sinema
+tarihinin en saçma demeçlerinden.
+\end{oz}
+
+\begin{acknowledgments}
+I would like to thank everyone. But I am too lazy...
+\end{acknowledgments}
+\dedication{All carrots I ate}
+\tableofcontents
+\listoffigures
+\listoftables
+\begin{glossary}[Symbols]   % default is Abbreviations
+\begin{list}{}{\leftmargin=4em\labelwidth=4em\def\makelabel#1{\bf #1 \hfill}}
+\item[BB] Bugs Bunny
+\item[DD] Duffy Duck
+\item[RR] Road Runner
+\item[Cyt] Coyote
+\item[SC] Silvister the Cat
+\item[TwT] Tweety
+\item[BB] Bugs Bunny
+\item[DD] Duffy Duck
+\item[RR] Road Runner
+\item[Cyt] Coyote
+\item[SC] Silvister the Cat
+\item[TwT] Tweety
+\item[BB] Bugs Bunny
+\item[DD] Duffy Duck
+\item[RR] Road Runner
+\item[Cyt] Coyote
+\item[SC] Silvister the Cat
+\item[TwT] Tweety
+\item[BB] Bugs Bunny
+\item[DD] Duffy Duck
+\item[RR] Road Runner
+\item[Cyt] Coyote
+\item[SC] Silvister the Cat
+\item[TwT] Tweety
+\item[BB] Bugs Bunny
+\item[DD] Duffy Duck
+\item[RR] Road Runner
+\item[Cyt] Coyote
+\item[SC] Silvister the Cat
+\item[TwT] Tweety
+\end{list}
+\end{glossary}
+\end{preliminaries}
+
+\input{introduction}
+\input{thatsallfolks}
+\newpage
+\layout
+
+\bibliographystyle{plain}
+
+\nocite{*}
+\bibliography{tez-bib}
+
+\begin{vita}
+Bugs Bunny was born in 1940 in Brooklyn, New York and the product of many creators: Ben
+"Bugs" Hardaway (who created a prototypical version of Bugs Bunny in 1938's Porky's
+Hare Hunt), Bob Clampett, Tex Avery, Robert McKimson (created the definitive Bugs Bunny
+character design), Chuck Jones, and Friz Freleng. According to Mel Blanc, his original
+voice actor, his accent is an equal blend of someone from the Bronx and someone from
+Brooklyn. Many children love Bugs Bunny for his funniness and character.
+
+He was nominated 4 times to Academy Award and won once with "Knighty Knight Bugs" in
+1958. 
+\end{vita}
+
+
+\end{document}

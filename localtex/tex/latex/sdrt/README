@@ -1,0 +1,17 @@
+This is the file README for sdrt.sty.  You'll find complete documentation in sdrt-doc.pdf
+
+This package is designed to help authors typesetting 
+papers related to Segmented Discourse Representation Theory (SDRT) 
+and formal semantics in general. Macros are provided to 
+draw the usual boxes, trees, and (hopefully) all the symbols
+of that theory, whose commands are easy to remember and
+avoid endless search through catalogues of math symbols.
+
+It requires xyling.sty (already available on some distributions 
+or downloadable through CTAN) to draw trees and thus xypic.sty.
+
+Licensing of this package is covered by LPPL.
+
+Any reaction is welcome: zappathustra@free.fr
+
+Paul Isambert

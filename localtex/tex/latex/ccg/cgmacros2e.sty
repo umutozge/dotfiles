@@ -1,0 +1,97 @@
+%%
+%% cgmacros2e.sty  -- cgmacros.sty modified for latex 2e code
+%%
+%% Macros  for writing Categorial Grammar derivations, categories & combinators.
+%% August 1997, Cem Bozsahin
+%%
+
+\newcommand{\sqrs}{\ensuremath{\sqrt{\mbox{\cgf S}}}}  % sqrt S
+
+\newcommand{\ranks}{\ensuremath{\supseteq}}
+\newcommand{\modnp}[1]{\cgs{NP}{\ensuremath{\widehat{#1}}}}
+\newcommand{\moddnp}[2]{\cgs{NP}{\ensuremath{\widehat{#1},\mathrm{#2}}}}
+\newcommand{\cgf}[1]{\mbox{\normalfont\textit{#1}}}     % CG category font
+\newcommand{\fs}{\ensuremath{/}}           % /: in any environment
+\newcommand{\bs}{\ensuremath{\backslash}}  % \: in any environment
+\newcommand{\us}{\ensuremath{\mid}}        % |: non-directional slash
+\newcommand{\fss}[1]{\ensuremath{\fs^{#1}}}% / with diacritic
+\newcommand{\bss}[1]{\ensuremath{\bs^{#1}}}% \ with diacritic
+\newcommand{\uss}[1]{\ensuremath{\us^{#1}}}% | with diacritic
+\newcommand{\fic}[2]{\ensuremath{\fs^{#1}\cgs{NP}{#2}}}% / with index and case (fwd,genotype)
+\newcommand{\bic}[2]{\ensuremath{\bs^{#1}\cgs{NP}{#2}}}% \ with index and case (bwd,genotype)
+\newcommand{\uic}[2]{\ensuremath{\us^{#1}\cgs{NP}{#2}}}% | with index and case (|,genotype)
+\newcommand{\red}{\ensuremath{\triangleright}}      % reduce sign (one step)
+\newcommand{\redf}{\ensuremath{\stackrel{\star}{\triangleright}}}%reduce(finite)
+\newcommand{\upcat}[1]{\cgf{#1}\ensuremath{^\uparrow}} % N^ notation for type/value raising
+
+\newcommand{\combf}[1]{\mbox{\textbf{#1}}} % combinator font
+
+\newcommand{\combb}{\ensuremath{\combf{B}}}      % Combinator B in any environment
+\newcommand{\combi}{\ensuremath{\combf{I}}}      % Combinator I
+\newcommand{\combk}{\ensuremath{\combf{K}}}      % Combinator K
+\newcommand{\combc}{\ensuremath{\combf{C}}}      % Combinator C
+\newcommand{\combs}{\ensuremath{\combf{S}}}      % Combinator S 
+\newcommand{\combw}{\ensuremath{\combf{W}}}      % Combinator W
+\newcommand{\comba}{\ensuremath{\combf{A}}}      % Combinator A (actually, not a comb)
+\newcommand{\combt}{\ensuremath{\combf{T}}}      % Combinator T (=C*)
+\newcommand{\combcs}{\ensuremath{\combf{C_\star}}}      % Combinator C*
+\newcommand{\combphi}{\ensuremath{\combf{\Phi}}}      % cOMBInator Phi
+\newcommand{\combpsi}{\ensuremath{\combf{\Psi}}}      % Combinator Psi
+
+\newcommand{\cgfa}{\ensuremath{>}}   % CCG rule names in derivations
+\newcommand{\cgba}{\ensuremath{<}}   % eg, this is backward appl A<
+\newcommand{\cgfadd}{\ensuremath{>\appmorph}}  % morf add
+\newcommand{\cgbadd}{\ensuremath{<\appmorph}}  
+\newcommand{\cgtr}{\ensuremath{\combt}}
+\newcommand{\cgftr}{\ensuremath{>\combt}}
+\newcommand{\cgbtr}{\ensuremath{<\combt}}
+%\newcommand{\cgdcomp}{\ensuremath{<\!\!dc}} % decomposition
+%\newcommand{\cgdcompf}{\ensuremath{>\!\!dc}} % fwd decomposition
+\newcommand{\cgdcomp}{\ensuremath{<<}} % decomposition
+\newcommand{\cgdcompf}{\ensuremath{>>}} % fwd decomposition
+\newcommand{\cgbxp}{\ensuremath{<\combt_\times}} % contraposition
+\newcommand{\cgfxp}{\ensuremath{>\combt_\times}}
+\newcommand{\cgfc}{\ensuremath{>\combb}}   % forward composition
+\newcommand{\cgbc}{\ensuremath{<\combb}}
+\newcommand{\cgfx}{\ensuremath{>\combb_\times}}    % forward crossing comp Bx>
+\newcommand{\cgfxx}{\ensuremath{>\combb_\times^2}} % this is Bx^2 
+\newcommand{\cgbx}{\ensuremath{<\combb_\times}}
+\newcommand{\cgsbx}{\ensuremath{<\combs_\times}}  % <Sx
+
+
+\newcommand{\mcomp}{\ensuremath{\bullet}} % semantic composition by add modalities
+
+%morphosyn type (=)
+\newcommand{\mseq}[2]{\ensuremath{\stackrel{#1}{\Join}\cgf{#2}}} 
+  % (=<)
+\newcommand{\msle}[2]{\ensuremath{\stackrel{#1}{\lhd}\cgf{#2}}}
+\newcommand{\atch}[1]{\ensuremath{\stackrel{#1}{\circ}}} % attach modality
+\newcommand{\pros}[1]{\ensuremath{\stackrel{#1}{\bullet}}} % prosodic  modality
+ 
+\newcommand{\cgs}[2]{\ensuremath{\mbox{\cgf{#1}}_{
+  \mbox{\normalfont\textrm{\scriptsize #2}}}}}% subscripted CG cat, eg NPnom
+\newcommand{\cgss}[3]{\ensuremath{\cgf{#1}_{\mathrm{#2}}^{#3}}}% sub+sup CG cat, eg NPnom^r
+
+\newcommand{\cgex}[2]                        % CG derivations, \cgex{}{} 
+  {\renewcommand{\arraystretch}{0.6} %%% 0.5 to 0.6 umut
+  \begin{tabular}[t]{@{}*{#1}{c@{\ }}}       % #1 = no. of columns, #2 = body
+     #2
+  \end{tabular}}
+\newcommand{\cgline}[2]                 % writing a CG line. 2 arguments
+ {\mc{#1}{\hrulefill \raisebox{-.30ex}{\tiny #2}}}% #1=# col #2=rule type 
+\newcommand{\cgdotline}[2]              % writing a dotted CG line. 2 arguments
+ {\mc{#1}{\dotfill \raisebox{-.30ex}{\tiny #2}}}% #1=# col #2=rule type 
+\newcommand{\badline}[2]                % showing bad derivations
+ {\mc{#1}{\hrulefill\raisebox{-1ex}{***}\hrulefill
+\raisebox{-.30ex}{\tiny #2}}}      % #1=# of col #2=what fail
+
+\newcommand{\cgul}{\cgline{1}{}}        % used for drawing lines 
+\newcommand{\cglexl}{\cgline{1}{L}}     % lexical assumption
+\newcommand{\cgres}[2]                  % CG result #1=#0f columns #2=result
+    {\mc{#1}{\cgf{#2}}}
+
+%%
+%% END of CCG MACROS
+%%
+
+

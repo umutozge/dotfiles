@@ -1,0 +1,81 @@
+For starting:
+1. Edit preambl.tex with your information. Edit all text files with
+   one of the UTF8 or ISO8859-9 (Latin 5) encoding. Use consistent
+   encoding.
+   provide the following:
+  \title{...}
+  \author{yourname}
+  \degree{yourdegree}
+  \department{your department}
+  \date{Month Year}
+  \graduateschool{...}
+  \director{gradschooldirector}
+  \headofdept{...}
+  \supervisor{name}{affiliation}
+  \turkishsupervisor{tr unvan isim}{bolum}
+  \cosupervisor{name}{affiliation}
+  \turkishcosupervisor{tr unvan isim}{bolum}
+  \committeemember{i}{name}{affiliation}
+  \committeemember{ii}{name}{affiliation}
+  University}
+  \committeemember{iii}{name}{affiliation}
+  \committeemember{iv}{name}{affiliation}
+  \shortdegree{Ph.D./M.Sc.}
+  \keywords{...}
+  \turkishtitle{...}
+  \turkishdegree{Doktora/Yüksek Lisans}
+  \turkishdepartment{Bolum}
+  \turkishdate{Ay Yil}
+  \anahtarklm{...}
+
+  As the first ({i}) committee member, define head of the examining
+  committee, it should be the first item in the signature list.
+  You should define four members here. Style file will insert your
+  supervisor as the second item in the signature list.
+
+2. copy tez-ornek.tex as your starting document
+3. edit it. choose the appropriate encoding in as one of:
+   \usepackage[latin5]{inputenc}
+   of
+   \usepackage[utf8]{inputenc}
+
+   in the second line.
+
+4. Enter your abstract and oz information.
+5. You can edit your whole document in a single file or choose
+   to have each chapter in a separate document. Second one is
+   more practical as the size of the document increases.
+   \input{introduction}
+   and
+   \input{thatsallfolks}
+   lines refer to two other files introduction.tex and thatsallfolks.tex
+   maintain your own chapter files instead and for all chapters put
+   an \input line in your main document
+6. For graphics inclusion, use \inputgraphics{filename} if you give filename without
+   extension, latex will search for an appropriate file in current directory. If you
+   use latex; dvips to generate postscript you should have a .eps picture
+   "filename.eps" in current directory. If you use pdflatex to generate pdf,
+   you can have either of ".pdf" file (use epstopdf to convert eps files) or ".jpg"
+   in current directory, pdf driver can process both.
+7. For bibliography it is convenient to use a bibliography database in bib
+   format. But all bibliography entries in tez-bib.bib (change the master document
+   \usebibliography{tez-bib} line in order to change the filename). For building
+   the bibliography follow this steps.
+   latex (or pdflatex) your document once
+   run "bibtex maindocument" once (not .bib file but .tex file)
+   then latex/pdflatex your document twice.
+   Repeat this steps when you change .bib file. Otherwise (adding citations in the main
+   document) you don't have to run bibtex. Just latex/pdflatex.
+8. for inserting a "List of abbreviations" and/or "list of symbols" use glossary
+   environment (just before closing preliminaries section)
+   \begin{glossary}
+   ...you can typeset as you wish here...
+   \end{glossary}
+   this will appear as a chapter titled "LIST OF ABBREVIATIONS". If you use another word
+   to be substituted for ABBREVIATIONS, give it as an optional parameter like:
+   \begin{glossary}[SYMBOLS]
+   \end{glossary}
+9. The default is 1.5 spacing. If you want to switch spacing to single space temporarily,
+   use singlespace environment
+   \begin{singlespace}
+   \end{singlespace}

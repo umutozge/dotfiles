@@ -1,0 +1,12 @@
+\glossaryentry{v1.0> =General:>Initial version}{1}
+\glossaryentry{v2.0> =General:>Removed the awkward-to-use \progname  {makethin} script now that the \pkgname  {microtype} package can shrink character widths more automatically}{5}
+\glossaryentry{v2.0> =General:>Added package options for altering various formatting parameters}{9}
+\glossaryentry{v1.2> =General:>Made the top margin consistent with the other margins and allocated space for the footer}{11}
+\glossaryentry{v1.2> =General:>Added support for reducing paragraph looseness}{14}
+\glossaryentry{v1.2a> =General:>Appended \texttt  {\string\relax } to \texttt  {\string\looseness !=-1} to avoid discarding any leading digits appearing in a paragraph}{14}
+\glossaryentry{v1.3> =General:>Added support for narrowing font widths}{14}
+\glossaryentry{v2.0> =General:>Added support for reducing inter-character spacing}{15}
+\glossaryentry{v2.0> =General:>Added support for reducing inter-word spacing}{15}
+\glossaryentry{v1.1>hebibliography=\verb!*+thebibliography+:>Modified to test for \texttt  {\string\chapter}, not \texttt  {\string\bibname}.}{15}
+\glossaryentry{v1.2>hebibliography=\verb!*+thebibliography+:>Modified to use the more robust \texttt  {\string\@ifundefined} macro to test for the existence of \texttt  {\string\chapter}}{15}
+\glossaryentry{v2.0> =General:>Made \texttt  {savetrees.bib} work independently of \texttt  {savetrees.sty} by having it define \texttt  {\string\savetreesbibnote} if not already defined}{17}

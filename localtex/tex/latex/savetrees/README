@@ -1,0 +1,46 @@
+                +------------------------------------+
+                |       THE SAVETREES PACKAGE        |
+                | By Scott Pakin, scott+st@pakin.org |
+                +------------------------------------+
+
+
+Description
+===========
+
+The goal of the savetrees package is to pack as much text as possible
+onto each page of a LaTeX document.  Admittedly, this makes the
+document far less attractive.  Nevertheless, savetrees is a simple way
+to save paper when printing draft copies of a document.  It can also
+be useful when trying to meet a tight page-length requirement for a
+conference or journal submission.
+
+
+Installation
+============
+
+Building the savetrees package is fairly straightforward:
+
+    latex savetrees.ins             <= Extract savetrees.sty and savetrees.bst.
+    latex savetrees.dtx             <= Build the documentation (savetrees.dvi).
+    makeindex -s gind.ist savetrees <= Generate an index (makeindex.ind).
+    latex savetrees.dtx             <= Add the index to the documentation.
+
+To install savetrees, move savetrees.sty into a directory searched by
+LaTeX (e.g., .../texmf/tex/latex/misc/) and move savetrees.bst into a
+directory searched by BibTeX (e.g., .../texmf/bibtex/bst/misc/).
+
+
+Copyright and license
+=====================
+
+Copyright (C) 2011 by Scott Pakin <scott+st@pakin.org>
+
+This file may be distributed and/or modified under the conditions of
+the LaTeX Project Public License, either version 1.3c of this license
+or (at your option) any later version.  The latest version of this
+license is in:
+
+    http://www.latex-project.org/lppl.txt
+
+and version 1.3c or later is part of all distributions of LaTeX
+version 2006/05/20 or later.

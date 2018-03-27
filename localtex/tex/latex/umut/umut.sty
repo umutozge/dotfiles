@@ -1,0 +1,416 @@
+
+%% Umut Ozge's latex commands and abbreviations
+%%
+
+\RequirePackage{xspace}
+\RequirePackage{cgmacros2e}
+%\RequirePackage{linguex}
+% 	\renewcommand{\refdash}{}
+%\RequirePackage{lingmacros}
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CCG derivations, I use cgmacros2e of Cem Bozsahin
+% the following are needed for his package.
+
+\newcommand{\mc}[2]                     % centered multicolumn, 
+  {\multicolumn{#1}{c}{#2}}             % #1 = no. of columns, #2 = body.
+\newcommand{\mcl}[2]                    % left adjusted multicolumn, 
+  {\multicolumn{#1}{l}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\mcr}[2]                    % right adjusted multicolumn, 
+  {\multicolumn{#1}{r}{#2}}              %#1=body(to override centering in \mc)
+\newcommand{\cggloss}[1]
+  {\\[1.5ex] \mc{#1}}
+
+%this is from cgmodalities.sty, for the sf and bold combinator
+%font
+\DeclareMathAlphabet{\mathcf}{OT1}{cmss}{bx}{n}
+
+
+% in place of mathcal, nice E
+
+\DeclareFontFamily{OT1}{pzc}{}
+\DeclareFontShape{OT1}{pzc}{m}{it}%
+              {<-> s * [1.2] pzcmi7t}{}
+\DeclareMathAlphabet{\mathscr}{OT1}{pzc}%
+                                 {m}{it}
+
+\DeclareMathAlphabet{\mathmd}{OT1}{pzc}%
+                                 {m}{it}
+
+%General
+\newcommand{\uterm}[1]{\textbf{#1}}
+
+%beamer related stuff
+
+\newcommand{\presmode}[1]{\mode<presentation>{#1}}
+\newcommand{\artmode}[1]{\mode<article>{#1}}
+
+
+
+%hylo
+
+\newcommand{\pf}[1]{\ensuremath{\mathsf{#1}}}
+\newcommand{\link}[1]{\ensuremath{\langle \mbox{\sc #1} \rangle}}
+\newcommand{\smref}[2]{\ensuremath{\downarrow_{#1}\hspace{-.2em}#2}}
+\newcommand{\smat}[2]{\ensuremath{@_{#1}#2}}
+
+%semantics
+
+%%types
+\newcommand{\tcon}[2]{\ensuremath{#1_{\scriptscriptstyle#2}}'}% typed non-logical constant
+\newcommand{\smtyp}[2]{\ensuremath{\langle #1,#2\rangle}}
+	\newcommand{\Tet}{\smtyp{e}{t}}
+	\newcommand{\Teet}{\smtyp{e}{\Tet}}
+	\newcommand{\Tett}{\smtyp{\Tet}{t}}
+
+%%model theory
+\newcommand{\mtob}[1]{\ensuremath{\mathscr{#1}}} %MT object
+\newcommand{\mtst}[1]{\ensuremath{\mathrm{#1}}}% set constants
+\newcommand{\interp}[1]{\ensuremath{\boldsymbol{\lVert}#1\boldsymbol{\rVert}}}
+\newcommand{\interpp}[1]{\ensuremath{\boldsymbol{\lVert}#1\boldsymbol{\rVert}_{\mathcal{M},g}}}
+\newcommand{\smtx}{\ensuremath{\mathrm{:}}} %colon operator
+\newcommand{\nlcs}[1]{\ensuremath{\mathit{#1^\prime}}}%non-logical constant
+\newcommand{\lgcs}[1]{\ensuremath{\mathbf{#1}}}%logical constant
+\newcommand{\cnct}{\ensuremath{\mspace{1mu}}}% space for concatenation
+\newcommand{\prfr}[1]{\ensuremath{\lgcs{pro}_{#1}}\xspace}%pro term 
+\newcommand{\prtr}[2]{\ensuremath{(\nlcs{pro}_{#2}\cnct{#1})}\xspace}%pro term 
+\newcommand{\anfr}[1]{\ensuremath{(\cnct{\lgcs{ana}\,}{#1})}}%ana term
+\newcommand{\idfr}[1]{\ensuremath{\lgcs{idx}_{#1}}\xspace}%indexical
+\newcommand{\idtr}[2]{\ensuremath{(\lgcs{idx}_{#2}\cnct{#1})}\xspace}%indexical 
+\newcommand{\imp}{\rightarrow}%conditional
+\newcommand{\then}{\rightarrow}%conditional
+\newcommand{\bicond}{\leftrightarrow}%biconditional
+\newcommand{\sk}[2]{\sysm{sk^{#2}_{#1}}}%generalized Skolem term
+\newcommand{\skk}[3]{\sysm{sk^{#2}_{#3\text{:}#1}}}%generalized Skolem term with index
+\newcommand{\asex}[3]{\sysm{#1_{[#3/#2]}}}
+\newcommand{\fnex}[3]{\sysm{#1_{[#2\mapsto#3]}}}
+\newcommand{\vlfn}[2]{\sysm{V_{\mathcal{M},#1}(#2)}}
+\newcommand{\crbr}[1]{\{#1\}}%curly brace
+\newcommand{\cntx}{\rule{5mm}{.1mm}}
+\newcommand{\subs}[3]{\ensuremath{{#1}_{[#2\!/\!#3]}}}
+\newcommand{\breduce}{\ensuremath{\quad \imp_\beta}\quad}%beta reduce
+
+%end semantics
+
+%formal language theory
+
+\newcommand{\sigmastar}{\ensuremath{\Sigma^*}}
+\newcommand{\setabs}[2]{\ensuremath{\{#1\ |\ #2\}}}
+
+
+
+%commenting
+\newcommand{\viscom}[1]{$\boldsymbol{\gg}${\small\sl
+#1}$\boldsymbol{\ll}$}
+
+%end commenting
+
+
+%ccg
+
+% combinators:
+
+\newcommand{\tcomb}{\ensuremath{\mathbf{T}}}
+\newcommand{\bcomb}{\ensuremath{\mathbf{B}}}
+\newcommand{\scomb}{\ensuremath{\mathbf{S}}}
+\newcommand{\xtcomb}{\ensuremath{\mathbf{T_{\hspace{-.3em}\times}}}}
+\newcommand{\xbcomb}{\ensuremath{\mathbf{B_{\hspace{-.3em}\times}}}}
+\newcommand{\xscomb}{\ensuremath{\mathbf{S_{\hspace{-.3em}\times}}}}
+\newcommand{\ccomb}{\ensuremath{\mathbf{C}}}
+
+
+
+\newcommand{\cat}[2]{\ensuremath{\mathit{#1}\ \mathrm{:}\ #2}}
+\newcommand{\catt}[3]{\hspace{#1}\ensuremath{#2\ \mathrm{:}\ #3}\hspace{#1}}
+%first arg is a stretch length
+
+\newcommand{\sysm}[1]{\ensuremath{\mathit{#1}}}
+\newcommand{\sys}[1]{\ensuremath{#1}}
+\newcommand{\sysmm}[1]{`\ensuremath{\mathit{#1}}'}
+
+
+\newcommand{\cats}[1]{\ensuremath{\mathit{#1}}}
+\newcommand{\catss}[2]{\hspace{#1}\ensuremath{\mathit{#2}}\hspace{#1}}
+\newcommand{\catS}[1]{\ensuremath{\mathrm{:}\ #1}}
+
+\newcommand{\pair}{\ensuremath{\ \mathrm{:}\ }}
+
+\newcommand{\altset}[1]{
+\(
+\left\{
+\begin{array}{l}
+#1
+\end{array}
+\right\} \) 
+} 
+\newcommand{\themeS}[1]{\ensuremath{\theta'(#1)}}
+\newcommand{\rhemeS}[1]{\ensuremath{\rho'(#1)}}
+
+% combinators 
+\newcommand{\combz}{\ensuremath{\combf{Z}}}      % Combinator Z in any environment
+
+%rule diacritics 
+
+\newcommand{\cgfp}{\ensuremath{>\combc}}  % >C
+\newcommand{\cgbp}{\ensuremath{<\combc}}  % <C
+
+
+
+\newcommand{\cgfz}{\ensuremath{>\combz}}  % >Z
+\newcommand{\cgbz}{\ensuremath{<\combz}}  % >Z
+\newcommand{\cgfxz}{\ensuremath{>\combz_\times}}  % >Zx
+\newcommand{\cgbxz}{\ensuremath{<\combz_\times}}  % <Zx
+
+\newcommand{\cgfs}{\ensuremath{>\combs}}  % >S
+\newcommand{\cgbs}{\ensuremath{<\combs}}  % <S
+\newcommand{\cgfxs}{\ensuremath{>\combs_\times}}  % >Sx
+\newcommand{\cgbxs}{\ensuremath{<\combs_\times}}  % <Sx
+
+
+
+%rule definitions
+
+\newcommand{\prcgfz}{
+\combrule{\cgfz}{\cat{X\fs Z \fs Y}{f}}{\cat{Y\fs Z}{g}}{\cat{X \fs Z}{\lambda x.f(gx)x}}
+}
+\newcommand{\prcgbz}{
+\combrule{\cgbz}{\cat{Y\bs Z}{g}}{\cat{X\bs Z \bs Y}{f}}{\cat{X \bs Z}{\lambda x.f(gx)x}}
+}
+
+%category abbrv. 
+
+\newcommand{\liftf}[2]{\cats{#2\fs (#2\bs #1)}}
+\newcommand{\liftb}[2]{\cats{#2\bs (#2\fs #1)}}
+
+%modalities 
+%adds new instances to Cem Bozsahin's encoding (cgmodalities.sty)
+
+\newcommand{\per}	 %forward star slash, math environment only
+{\us\,\makebox[.05em][r]{\raisebox{-3pt}{\tiny$\otimes$}}}
+
+
+%to be used in dervs. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%var
+\newcommand{\lm}[1]{\lambda #1}
+% \newcommand{\x}{\lambda x}
+% \newcommand{\y}{\lambda y}
+% \newcommand{\z}{\lambda z}
+% \newcommand{\w}{\lambda w}
+% \newcommand{\p}{\lambda p}
+% \newcommand{\q}{\lambda q}
+% \newcommand{\lr}{\lambda r}
+% \newcommand{\s}{\lambda s}
+% \newcommand{\lt}{\lambda t}
+% \newcommand{\f}{\lambda f}
+% \newcommand{\g}{\lambda g}
+
+% \newcommand{\lf}{\lambda f}
+% 
+% \newcommand{\lx}{\lambda x}
+% \newcommand{\ly}{\lambda y}
+% \newcommand{\lz}{\lambda z}
+% \newcommand{\lw}{\lambda w}
+% \newcommand{\lp}{\lambda p}
+
+\newcommand{\setcomp}[2]{\ensuremath{\{#1\,|\,#2\}}}
+
+
+\newcommand{\sitc}[1]{\ensuremath{s_{#1}'}}
+\newcommand{\sitv}[1]{\ensuremath{s_{#1}}}
+
+\newcommand{\ezimeti}[1]{\begin{itemize}{\normalsize #1 }\end{itemize}}
+\newcommand{\ezi}[1]{\begin{itemize}{\normalsize #1 }\end{itemize}}
+\newcommand{\etaremune}[1]{\begin{enumerate}{\normalsize #1 }\end{enumerate}}
+
+\newcommand{\ungra}{{*}}
+\newcommand{\unpra}{\#}
+
+\newcommand{\versus}{vs.\xspace}
+\newcommand{\vizavi}{vis-\`a-vis\xspace}
+
+\newcommand{\forind}{\hspace*{5 mm}} %indentation in multiline formulas
+
+\newcommand{\dash}{\mbox{-}}
+\newcommand{\env}[1]{^{\{#1\}}}
+
+
+\newcommand{\sm}[2]{\ensuremath{\langle #1,#2\rangle}}
+\newcommand{\strpos}{$\ldots$}
+\newcommand{\foc}[1]{\textsc{#1}}
+\newcommand{\theme}[1]{(#1)$_{Theme}$}
+\newcommand{\rheme}[1]{(#1)$_{Rheme}$}
+\newcommand{\konp}[1]{\ensuremath{*(#1)}}
+\newcommand{\konn}[1]{{*}#1}
+\newcommand{\kon}[1]{\textit{#1}}
+\newcommand{\hlex}[1]{\textbf{#1}}%highlighting in examples.
+
+\newcommand{\rise}{LH\%}
+\newcommand{\fall}{LL\%}
+
+\newcommand{\gap}[1]{\_\_$_{#1}$}
+
+
+\newcommand{\binfeat}[1]{$[\pm\mathrm{#1}]$}
+
+\newcommand{\syft}[1]{\ensuremath{_{\ctft{#1}}}}%subscripted features
+\newcommand{\ctft}[1]{\ensuremath{[\mathrm{#1}]}}%citing features
+\newcommand{\indx}[1]{\ensuremath{_{#1}}}
+\newcommand{\ind}[1]{$_{#1}$}
+
+\newcommand{\clab}[2]{ $[$#1$]_{#2}$} 
+
+\newcommand{\xref}[1]{(\ref{#1})}
+\newcommand{\xxref}[2]{(\ref{#1}#2)}
+\newcommand{\intx}[1]{\textit{#1}}
+\newcommand{\trtx}[2]{\emph{#1} (`#2')} %in text cit for Tr exs.
+\newcommand{\cttr}[1]{\textbf{#1}}
+
+%% abbreviations for theory/account names.
+\newcommand{\ccg}{{CCG}\xspace}
+\newcommand{\ccgo}{{C}ombinatory {C}ategorial {G}rammar}
+\newcommand{\gsf}{{GSF}\xspace}
+\newcommand{\gst}{{GST}\xspace}
+\newcommand{\gsto}{generalized {S}kolem term\xspace}
+\newcommand{\gsfo}{generalized {S}kolem function\xspace}
+\newcommand{\mmccg}{{$\mathcal{M}$-CCG}}
+\newcommand{\msccg}{{$\{\}$-CCG}}
+
+
+%% modifications and additions to lingmacros.sty
+
+\newcommand{\myenum}[1]{\enumsentence{#1}}
+\newcommand{\myeenum}[1]{\eenumsentence{#1}}
+
+\newcommand{\shortexng}[3]{\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#3}}
+\end{tabular}}
+
+\newcommand{\shortexdg}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\#4\\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#5}}
+\end{tabular}}
+
+\newcommand{\shortexdt}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#4}}
+\\  \multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#5}}
+\end{tabular}}
+
+\newcommand{\shortexdgnt}[4]{\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 
+\end{tabular}}
+%% various ccg related commands
+
+\newcommand{\lexsign}[3]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{\it #1}\end{tabular}
+&$:=$&
+\sysm{\begin{array}[t]{c} #2 \end{array}}
+&:&
+\sysm{\begin{array}[t]{r} #3 \end{array}} 
+\end{tabular}
+}
+
+\newcommand{\lexsignc}[2]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{\it #1}\end{tabular}
+&$:=$&
+$\begin{array}[t]{c} #2 \end{array}$
+\end{tabular}
+}
+\newcommand{\compsign}[3]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{\it #1}\end{tabular}
+&$:=$&
+$\begin{array}[t]{c} #2 \end{array}$
+&:&
+$\begin{array}[t]{l} #3 \end{array}$ 
+\end{tabular}
+}
+\newcommand{\compsignc}[3]{
+\renewcommand{\arraycolsep}{0ex}
+\begin{tabular}[t]{lcccc}
+\begin{tabular}[t]{l}{\it #1}\end{tabular}
+&$:=:$&
+$\begin{array}[t]{c} #2 \end{array}$
+\end{tabular}
+}
+
+\newcommand{\lexrulU}[2]{$
+\begin{array}[t]{c@{\quad\Rightarrow_{_{LEX}\quad}}c}
+#1 & #2\\
+\end{array}$
+}
+
+\newcommand{\lexrul}[3]{$
+\begin{array}[t]{ll@{$\hspace{1em}$\Rightarrow_{LEX}$\hspace{1em}$}l}
+#1 & #2 & #3\\
+\end{array}$
+}
+
+\newcommand{\combrul}[4]{$
+\begin{array}[t]{ll@{$\hspace{1em}$\Rightarrow$\hspace{1em}$}l}
+{#1} & #2 & #3\\
+\end{array}$\hfill $(#4)$
+}
+
+\newcommand{\combrulU}[3]{$
+\begin{array}[t]{l@{$\hspace{1em}$\Rightarrow$\hspace{1em}$}l}
+#1 & #2 \\
+\end{array}$\hfill $(#3)$
+}
+
+%% CCG derivations, to be used with Cem Bozsahin's cgmacros.sty
+
+\renewcommand{\cgres}[2]{
+	\multicolumn{#1}{c}{
+		$
+		\begin{array}[t]{c}
+			#2
+		\end{array}	
+		$
+	}
+}
+
+\newcommand{\Evq}{quan}
+\newcommand{\cortex}[6]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 \\  #5\\ 
+\multicolumn{#1}{@{}l@{}}{\parbox{\linewidth}{#6}}
+\end{tabular}}
+
+\newcommand{\cortexnt}[5]{
+\begin{tabular}[t]{@{}*{#1}{l@{\ }}}
+#2\\ #3 \\ #4 \\  #5  
+\end{tabular}}
+%% various
+
+
+%% A fix for cgloss4e.sty from linguex package doc:
+
+\makeatletter
+\def\@listi{\leftmargin\leftmargini
+    \parsep 5\p@ \@plus2.5\p@ \@minus\p@
+	    \topsep 10\p@ \@plus4\p@   \@minus6\p@
+		    \itemsep5\p@ \@plus2.5\p@ \@minus\p@}
+			\let\@listI\@listi
+			\@listi
+\makeatother
+
+
+
+\newcommand{\nosp}{}
+
+
+

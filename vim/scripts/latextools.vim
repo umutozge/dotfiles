@@ -29,10 +29,10 @@ elseif a:silent && !a:copy
 	execute "silent !pdflatex -interaction=batchmode " . a:file ." > /dev/null&"
 	execute "redraw!"
 elseif !a:silent && a:copy
-	execute "!pdflatex " . a:file 
+	execute "!pdflatex --shell-escape " . a:file 
 	call SecureCopy(a:file . ".pdf",a:silent)
 elseif !a:silent && !a:copy
-	execute "!pdflatex " . a:file 
+	execute "!pdflatex --shell-escape " . a:file 
 endif
 endfunction
 

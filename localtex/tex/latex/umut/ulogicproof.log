@@ -1,0 +1,73 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.6.20)  9 DEC 2016 01:23
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ulogicproof.sty
+(/home/umut/.mytex/tex/latex/umut/ulogicproof.sty
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 27 languages loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `logicproof'.
+
+Package: logicproof 2014/03/20 v1.0 Box proofs for propositional logic
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen102
+\extrarowheight=\dimen103
+\NC@list=\toks14
+\extratabsurround=\skip41
+\backup@length=\skip42
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box26
+\UL@hyphenbox=\box27
+\UL@skip=\skip43
+\UL@hook=\toks15
+\UL@height=\dimen104
+\UL@pe=\count79
+\UL@pixel=\dimen105
+\ULC@box=\box28
+Package: ulem 2012/05/18
+\ULdepth=\dimen106
+)
+\subproofhorizspace=\skip44
+\intersubproofvertspace=\skip45
+\c@lp@line=\count80
+\c@lp@nested=\count81
+\c@lp@total@nests=\count82
+\c@lp@cline@1=\count83
+\c@lp@cline@2=\count84
+\c@lp@temp=\count85
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 }
+       
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.108 }
+       
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 216 strings out of 494450
+ 2634 string characters out of 6165792
+ 48469 words of memory out of 5000000
+ 3552 multiletter control sequences out of 15000+600000
+ 3746 words of font info for 15 fonts, out of 8000000 for 9000
+ 350 hyphenation exceptions out of 8191
+ 16i,0n,17p,132b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

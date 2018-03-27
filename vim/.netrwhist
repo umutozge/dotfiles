@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/umut/Annotation/Analysis/phase2/compare-all-acc/nagihan'
-let g:netrw_dirhist_2='/home/umut/Annotation/Analysis/phase2/compare-all-acc'
-let g:netrw_dirhist_3='/home/umut/Dropbox/res/cr/dev/tl'
-let g:netrw_dirhist_4='/home/umut/Dropbox/lib/dotfiles/.mytex/tex/latex/umut'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/umut/Dropbox/res/github/theoretical-linguistics'

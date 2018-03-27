@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% CCG stuff originally by B. Hoffman, modified by mjs and cemB
+%frig \mathbf for combinators to sans:
+\DeclareMathAlphabet{\mathbf}{OT1}{cmss}{bx}{n}
+
+%cem \newcommand{\bs}{\backslash}
+\newcommand{\Tc}{\mathbf{T}}
+\newcommand{\Bc}{\mathbf{B}}
+\newcommand{\Sc}{\mathbf{S}}
+\newcommand{\bu}{\%}%{\S}%{\letterspace to 0.82\naturalwidth{\%\%}}
+\newcommand{\mathasterisk}{\raisebox{0pt}{*}}%an asterisk raised as in
+					     %textmode for mathmode
+%%%% Bozsahin modal slashes
+%\newcommand{\affix}{\ensuremath{\oplus}}
+%\newcommand{\clitic}{\ensuremath{\odot}}
+%\newcommand{\compound}{\ensuremath{\oslash}}
+%\newcommand{\allmorph}{\ensuremath{\bullet}}
+%\newcommand{\appmorph}{\ensuremath{\circ}}
+\newcommand{\affix}{\ensuremath{\ominus}}
+\newcommand{\clitic}{\ensuremath{\oplus}}
+\newcommand{\compound}{\ensuremath{\oslash}}
+\newcommand{\allmorph}{\ensuremath{\circ}}
+\newcommand{\appmorph}{\ensuremath{+}}
+\newcommand{\morfsem}{\ensuremath{\mbox{\tiny +\,}}}
+
+\newcommand{\ftop}	 % all mods, math environment only
+{\fs\,\makebox[.25em][r]{\raisebox{-3pt}{\tiny$\top$}}}
+\newcommand{\btop}	 % all mods, math environment only
+{\bs\makebox[.5em][r]{\raisebox{-3pt}{\tiny$\top$}}}
+
+\newcommand{\fbot}	 % bottom mod, math environment only
+{\fs\,\makebox[.25em][r]{\raisebox{-3pt}{\tiny$\bot$}}}
+\newcommand{\bbot}	 % , math environment only
+{\bs\makebox[.5em][r]{\raisebox{-3pt}{\tiny$\bot$}}}
+
+\newcommand{\fclitic}	 % (for clitics)
+{\fs\ \makebox[.05em][r]{\raisebox{-2pt}{\tiny\clitic}}}
+\newcommand{\bclitic}	 
+{\bs\ \makebox[.2em][r]{\raisebox{-2pt}{\tiny\clitic}}}
+
+\newcommand{\faffix}	 %  (for affixes)
+{\fs\ \makebox[.05em][r]{\raisebox{-2pt}{\tiny\affix}}}
+\newcommand{\baffix}	
+{\bs\ \makebox[.2em][r]{\raisebox{-2pt}{\tiny\affix}}}
+
+\newcommand{\fcompound}	 %  (for compounds)
+{\fs\ \makebox[.05em][r]{\raisebox{-2pt}{\tiny\compound}}}
+\newcommand{\bcompound}	
+{\bs\ \makebox[.2em][r]{\raisebox{-2pt}{\tiny\compound}}}
+
+\newcommand{\fappm}	 %  (for all morphs)
+{\fs\ \makebox[.05em][r]{\raisebox{-2pt}{\tiny\appmorph}}}
+\newcommand{\bappm}	
+{\bs\ \makebox[.2em][r]{\raisebox{-2pt}{\tiny\appmorph}}}
+
+\newcommand{\fallm}	 %  (for bottom morphs)
+{\fs\ \makebox[.05em][r]{\raisebox{-2pt}{\tiny\allmorph}}}
+\newcommand{\ballm}	
+{\bs\ \makebox[.2em][r]{\raisebox{-2pt}{\tiny\allmorph}}}
+%%%% Baldridge modal slashes
+
+\newcommand{\fxs}	 %forward crossing slash, math environment only
+{\fs\,\makebox[.25em][r]{\raisebox{-3pt}{\scriptsize$\times$}}}
+\newcommand{\bxs}	 % backward crossing slash, math environment only
+{\bs\makebox[.5em][r]{\raisebox{-3pt}{\scriptsize$\times$}}}
+
+\newcommand{\fdots}	 %forward dot slash, math environment only
+{\fs\,\makebox[.05em][r]{\raisebox{-2pt}{\scriptsize$\cdot$}}}
+\newcommand{\bdots}	 % backward dot slash, math environment only
+{\bs\makebox[.2em][r]{\raisebox{-2pt}{\scriptsize$\cdot$}}}
+
+\newcommand{\fds}	 %forward diamond slash, math environment only
+{\fs\,\makebox[.1em][r]{\raisebox{-3pt}{\scriptsize$\diamond$}}}
+\newcommand{\bds}	 % backward diamond slash, math environment only
+{\bs\makebox[.4em][r]{\raisebox{-3pt}{\scriptsize$\diamond$}}}
+
+\newcommand{\fstars}	 %forward star slash, math environment only
+{\fs\,\makebox[.1em][r]{\raisebox{-3pt}{\scriptsize$\star$}}}
+\newcommand{\bstars}	 % backward star slash, math environment only
+{\bs\makebox[.4em][r]{\raisebox{-3pt}{\scriptsize$\star$}}}
+
+%frig \mathbf for combinators to sans:
+\DeclareMathAlphabet{\mathbf}{OT1}{cmss}{bx}{n}
+
+%somehow does #1 many c's
+% CCG derivations
+% arguments: #1 = no. of words, #2 = body
+\newcommand{\deriv}[2]
+{ %\arraycolsep=.25em
+   \renewcommand{\arraystretch}{.5}
+  $\begin{array}[t]{@{}*{#1}{c@{~~}}}
+     #2
+   \end{array}$ }
+
+% centered multicolumn, 
+\newcommand{\mcol}[2]
+  {\multicolumn{#1}{c}{#2}}
+%\newcommand{\less}{\\ \vspace{-.5ex}}
+% Rules, argument #1 gives the number of columns to cover.
+\newcommand{\uline}[1]
+{\mcol{#1}{\hrulefill} }
+\newcommand{\fapply}[1]
+{ \mcol{#1}{\hrulefill_{>}} }
+\newcommand{\bapply}[1]
+{ \mcol{#1}{\hrulefill_{<}} }
+\newcommand{\fcomp}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{B}}}}
+\newcommand{\fxcomp}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{B}_{\times}}}}
+\newcommand{\fcomptwo}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{B}^2}}}
+\newcommand{\fxcomptwo}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{B}_{\times}^2}}}
+\newcommand{\fcompthree}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{B}^3}}}
+\newcommand{\bcomp}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}}}}
+\newcommand{\bxcomp}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}_{\times}}}}
+\newcommand{\bcomptwo}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}^2}}}
+\newcommand{\bxcomptwo}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^2}}}
+\newcommand{\bcompthree}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}^3}}}
+\newcommand{\bxcompthree}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^3}}}
+\newcommand{\fsubst}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{S}}}}
+\newcommand{\fxsubst}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{S}_{\times}}}}
+\newcommand{\bxsubst}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{S}_{\times}}}}
+\newcommand{\ftype}[1]
+{ \mcol{#1}{\hrulefill_{{>}\mathbf{T}}}}
+\newcommand{\btype}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{T}}}}
+\newcommand{\conj}[1]
+{ \mcol{#1}{\hrulefill_{{<}\Phi{>}}}}
+\newcommand{\boundary}[1]
+{ \mcol{#1}{\hrulefill_{{<}\mathbf{\%}}}}
+\newcommand{\asterisk}[1]
+{ \mcol{#1}{\hrulefill_{\mathbf{*}}}}
+\newcommand{\comb}[2] % an arbitrary combinator
+{ \mcol{#1}{\hrulefill_{#2}}}
+\newcommand{\dcomp}[2] % an arbitrary dcomposition
+{ \mcol{#1}{\dotfill_{#2}}}
+\newcommand{\unfreeze}[1]
+{\mcol{#1}{\hrulefill_{\mathbf{@}}}  }
+

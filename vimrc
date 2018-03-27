@@ -28,7 +28,10 @@ set incsearch
 "global key bindings
 
 nnoremap <TAB> 0i<TAB><ESC>
+nnoremap Y yg_
 inoremap jk <ESC>
+vnoremap jk <ESC>
+inoremap <C-[> <PageUp>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 
@@ -39,16 +42,22 @@ inoremap [] []<Esc>i
 inoremap <> <><Esc>i
 
 
+
 "" edit vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 "" source vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
+
+"" session management
+nnoremap <leader>q :wall<BAR>execute "mksession!" . v:this_session<BAR>qall<CR>
+
+
 "" append selection to a scratch file
 vnoremap <leader>as y:call writefile(split(@0,'\n'),'.scratch')<CR>
 "y:w! >> ~/.scratch<CR>
 "" view scratch
-nnoremap <leader>vs :vsplit ~/.scratch<CR>
+nnoremap <leader>es :vsplit ~/.scratch<CR>
 
 "" various ways of inserting dates
 nnoremap <leader>id  :r!date +\%Y\%m\%d
@@ -58,7 +67,7 @@ nnoremap <leader>idt :r!date +'\%a, \%d \%b \%y -- \%H:\%M'
 nnoremap <leader>idh :r!date +\%F
 
 
-" mutt starts vim global settings, so this is for switching to mutt-mode
+" mutt starts vim with global settings, so this is for switching to mutt-mode
 nnoremap <leader>mm :set textwidth=0<CR>:colors zenburn<CR>
 
 "locally change to the directory of the current file
@@ -76,10 +85,12 @@ nnoremap <leader>rp %x``x
 "word count the selection
 vnoremap <leader>wc y:!echo '<C-R>"'\|wc -w 
 
-hi SpellBad ctermfg=white ctermbg=red
-
 "remove leading white space in selection
 vnoremap <leader>rs :s/^\s\+//g<CR>
+
+"paste from clipboard
+nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
+
 
 "auto commands
 
@@ -104,3 +115,5 @@ augroup ccg
 	autocmd!
 	autocmd BufNewFile,BufRead *.ccg nnoremap <buffer> <localleader>i :vsplit inspect<CR>:set paste<CR><C-a>>:read /tmp/screen-exchange<CR>:set nopaste<CR>
 augroup END
+
+hi SpellBad ctermfg=white ctermbg=red

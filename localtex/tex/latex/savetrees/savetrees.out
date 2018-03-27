@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [1][-]{section.2}{Usage}{}
+\BOOKMARK [1][-]{section.3}{Abbreviating bibliographic information}{}
+\BOOKMARK [1][-]{section.4}{Implementation of savetrees.sty}{}
+\BOOKMARK [2][-]{subsection.4.1}{Default values}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{Option processing}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{Section titles}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{Page margins}{section.4}
+\BOOKMARK [2][-]{subsection.4.5}{List spacing}{section.4}
+\BOOKMARK [2][-]{subsection.4.6}{Float placement}{section.4}
+\BOOKMARK [2][-]{subsection.4.7}{Paragraph indentation}{section.4}
+\BOOKMARK [2][-]{subsection.4.8}{Document title formatting}{section.4}
+\BOOKMARK [2][-]{subsection.4.9}{Interline spacing}{section.4}
+\BOOKMARK [2][-]{subsection.4.10}{Paragraph looseness}{section.4}
+\BOOKMARK [2][-]{subsection.4.11}{Font width}{section.4}
+\BOOKMARK [2][-]{subsection.4.12}{Inter-character spacing}{section.4}
+\BOOKMARK [2][-]{subsection.4.13}{Inter-word spacing}{section.4}
+\BOOKMARK [2][-]{subsection.4.14}{Bibliography formatting}{section.4}
+\BOOKMARK [2][-]{subsection.4.15}{Bibliographic notes}{section.4}
+\BOOKMARK [1][-]{section.5}{Implementation of savetrees.bst}{}
+\BOOKMARK [1][-]{section.A}{Average character widths of common fonts}{}
+\BOOKMARK [1][-]{section.B}{Gallery of space-saving techniques}{}
