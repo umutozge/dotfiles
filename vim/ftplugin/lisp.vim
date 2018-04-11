@@ -12,9 +12,9 @@ noremap <buffer> <localleader>e y:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlw
 "do the same as above if the start and end of selection has not changed -- it is OK to add lines in between
 noremap <buffer> <localleader>re gvy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 "send the region between marks s and e
-noremap <buffer> <localleader>em `sV`ey:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
+noremap <buffer> <localleader>em mw`sV`ey:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 "send the entire file to internal sbcl 
-noremap <buffer> <localleader>w ggvGy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
+noremap <buffer> <localleader>w mwggvGy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 
 "deletes the form included in the nearest leftward and matching parentheses
 nnoremap <buffer> <localleader>d ?(<CR>v%d

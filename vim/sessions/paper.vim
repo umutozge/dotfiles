@@ -80,9 +80,10 @@ badd +15 Dropbox/lib/dotfiles/.mytex/bibtex/bib/ozge.bib
 badd +92 .vimrc
 badd +4 Dropbox/res/pp/sentnom-biblio/sentnom-biblio.tex
 badd +1 Dropbox/res/pp/cc-biblio/cc-biblio.tex
-badd +1 Dropbox/res/pp/sent-nom/mais-abstract.tex
+badd +54 Dropbox/res/pp/sent-nom/mais-abstract.tex
 badd +3 Dropbox/res/tpcs/comparatives.md
-badd +1 Dropbox/res/tlks/2018-01-05-cogs-colloq/2018-01-05-cogs-colloq.tex
+badd +126 Dropbox/res/tlks/2018-01-05-cogs-colloq/2018-01-05-cogs-colloq.tex
+badd +67 Dropbox/res/pp/sent-nom/abstract/mais-abstract.tex
 argglobal
 silent! argdel *
 argadd Dropbox/res/pp/sent-nom/sent-nom.tex
@@ -108,6 +109,8 @@ noremap <buffer> ,xxr i \xxref"lpa{ }hxi
 noremap <buffer> ,xr i \xref"lpa 
 noremap <buffer> ,cl v%"ly
 noremap <buffer> ,l 0i\label{Ea}v%"lyA 
+noremap <buffer> ,dc gg/comment}%start0i%/comment}%end0i%
+noremap <buffer> ,ac gg/comment}%start0x/comment}%end0x
 vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
 vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
 noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
@@ -239,172 +242,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 550 - ((28 * winheight(0) + 27) / 55)
+let s:l = 117 - ((43 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-550
+117
 normal! 0
 lcd ~/Dropbox/res/pp/sent-nom
-tabedit ~/Dropbox/res/tlks/2018-01-05-cogs-colloq/2018-01-05-cogs-colloq.tex
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-noremap <buffer> ,hl /labelf{lvf}hy/end{uexerciseO\hyperlink{pasol}{\qed}O
-noremap <buffer> ,,udr ?draft]dawhx''
-noremap <buffer> ,dr ?documentclassf]i,draft''
-noremap <buffer> ,if i\begin{frame}\end{frame}?begin{frame}A{}
-nnoremap <buffer> ,n i\{\}hi 
-nnoremap <buffer> ,m i$$i
-nnoremap <buffer> ,s i\sysm{} 
-nnoremap <buffer> ,,al i\begin{align}\end{align}O
-nnoremap <buffer> ,al i\begin{align*}\end{align*}O
-noremap <buffer> ,it i\begin{itemize}\item\end{itemize}?\\itemA 
-noremap <buffer> ,xxr i \xxref"lpa{ }hxi
-noremap <buffer> ,xr i \xref"lpa 
-noremap <buffer> ,cl v%"ly
-noremap <buffer> ,l 0i\label{Ea}v%"lyA 
-vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
-vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
-noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
-vnoremap <buffer> ,p meoi{`ela}
-nnoremap <buffer> ,pt :!rm -r pythontex* ; pythontex3 %
-noremap <buffer> ,v :!evince %pdf&
-noremap <buffer> ,b :w:call Bibtex()
-noremap <buffer> ,,r :w:mkview:lcd %:p:h::call Typeset(0,0)
-noremap <buffer> ,r :w:mkview:lcd %:p:h:call Typeset(0,1)
-noremap <buffer> ,,ls :w:mkview:lcd %:p:h::call Typeset(1,0)
-noremap <buffer> ,ls :w:mkview:lcd %:p:h:call Typeset(1,1)
-let s:cpo_save=&cpo
-set cpo&vim
-inoremap <buffer> şş :!setxkbmap -layout usi<Right>
-inoremap <buffer> ,n \{\}hi 
-inoremap <buffer> ,m $$i
-inoremap <buffer> ,s \sysm{}
-inoremap <buffer> ,V \Verb++i
-inoremap <buffer> ;; :!setxkbmap -layout tri<Right>
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'tex'
-setlocal filetype=tex
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'tex'
-setlocal syntax=tex
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 160 - ((32 * winheight(0) + 27) / 55)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-160
-normal! 0
-lcd ~/Dropbox/res/tlks/2018-01-05-cogs-colloq
 tabedit ~/Dropbox/lib/dotfiles/.mytex/bibtex/bib/ozge.bib
 set splitbelow splitright
 set nosplitbelow
@@ -522,170 +366,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 14 - ((13 * winheight(0) + 27) / 55)
+let s:l = 64 - ((54 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-14
-normal! 027|
-lcd ~/Dropbox/res/pp/sent-nom
-tabedit ~/Dropbox/res/pp/sent-nom/mais-abstract.tex
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-noremap <buffer> ,hl /labelf{lvf}hy/end{uexerciseO\hyperlink{pasol}{\qed}O
-noremap <buffer> ,,udr ?draft]dawhx''
-noremap <buffer> ,dr ?documentclassf]i,draft''
-noremap <buffer> ,if i\begin{frame}\end{frame}?begin{frame}A{}
-nnoremap <buffer> ,n i\{\}hi 
-nnoremap <buffer> ,m i$$i
-nnoremap <buffer> ,s i\sysm{} 
-nnoremap <buffer> ,,al i\begin{align}\end{align}O
-nnoremap <buffer> ,al i\begin{align*}\end{align*}O
-noremap <buffer> ,it i\begin{itemize}\item\end{itemize}?\\itemA 
-noremap <buffer> ,xxr i \xxref"lpa{ }hxi
-noremap <buffer> ,xr i \xref"lpa 
-noremap <buffer> ,cl v%"ly
-noremap <buffer> ,l 0i\label{Ea}v%"lyA 
-vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
-vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
-noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
-vnoremap <buffer> ,p meoi{`ela}
-nnoremap <buffer> ,pt :!rm -r pythontex* ; pythontex3 %
-noremap <buffer> ,v :!evince %pdf&
-noremap <buffer> ,b :w:call Bibtex()
-noremap <buffer> ,,r :w:mkview:lcd %:p:h::call Typeset(0,0)
-noremap <buffer> ,r :w:mkview:lcd %:p:h:call Typeset(0,1)
-noremap <buffer> ,,ls :w:mkview:lcd %:p:h::call Typeset(1,0)
-noremap <buffer> ,ls :w:mkview:lcd %:p:h:call Typeset(1,1)
-let s:cpo_save=&cpo
-set cpo&vim
-inoremap <buffer> şş :!setxkbmap -layout usi<Right>
-inoremap <buffer> ,n \{\}hi 
-inoremap <buffer> ,m $$i
-inoremap <buffer> ,s \sysm{}
-inoremap <buffer> ,V \Verb++i
-inoremap <buffer> ;; :!setxkbmap -layout tri<Right>
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'tex'
-setlocal filetype=tex
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'tex'
-setlocal syntax=tex
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 27) / 55)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-6
+64
 normal! 0
 lcd ~/Dropbox/res/pp/sent-nom
 tabedit ~/Dropbox/res/pp/cc-biblio/cc-biblio.tex
@@ -709,6 +394,8 @@ noremap <buffer> ,xxr i \xxref"lpa{ }hxi
 noremap <buffer> ,xr i \xref"lpa 
 noremap <buffer> ,cl v%"ly
 noremap <buffer> ,l 0i\label{Ea}v%"lyA 
+noremap <buffer> ,dc gg/comment}%start0i%/comment}%end0i%
+noremap <buffer> ,ac gg/comment}%start0x/comment}%end0x
 vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
 vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
 noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
@@ -840,11 +527,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 31 - ((30 * winheight(0) + 27) / 55)
+let s:l = 51 - ((23 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-31
+51
 normal! 0
 lcd ~/Dropbox/res/pp/cc-biblio
 tabedit ~/Dropbox/lib/dotfiles/.mytex/bibtex/bib/ozge.bib
@@ -965,12 +652,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 28 - ((27 * winheight(0) + 27) / 55)
+let s:l = 13 - ((9 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-28
-normal! 032|
+13
+normal! 015|
 lcd ~/Dropbox/res/pp/cc-biblio
 tabedit ~/Dropbox/res/github/bare-objects/paper/tr-bare-objects.tex
 set splitbelow splitright
@@ -993,6 +680,8 @@ noremap <buffer> ,xxr i \xxref"lpa{ }hxi
 noremap <buffer> ,xr i \xref"lpa 
 noremap <buffer> ,cl v%"ly
 noremap <buffer> ,l 0i\label{Ea}v%"lyA 
+noremap <buffer> ,dc gg/comment}%start0i%/comment}%end0i%
+noremap <buffer> ,ac gg/comment}%start0x/comment}%end0x
 vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
 vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
 noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
@@ -1153,6 +842,8 @@ noremap <buffer> ,xxr i \xxref"lpa{ }hxi
 noremap <buffer> ,xr i \xref"lpa 
 noremap <buffer> ,cl v%"ly
 noremap <buffer> ,l 0i\label{Ea}v%"lyA 
+noremap <buffer> ,dc gg/comment}%start0i%/comment}%end0i%
+noremap <buffer> ,ac gg/comment}%start0x/comment}%end0x
 vnoremap <buffer> ,u :s/^% \(.*\)$/\1/g
 vnoremap <buffer> ,c :s/\(^.*$\)/% \1/g
 noremap <buffer> ,ie 0dawi\begin{p}\end{p}O
@@ -1292,7 +983,7 @@ normal! zt
 27
 normal! 0
 lcd ~/Dropbox/res/pp/otsoi
-tabnext 4
+tabnext 1
 set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

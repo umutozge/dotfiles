@@ -47,6 +47,12 @@ noremap <buffer> <localleader>ie 0dawi\begin{<C-o>p}<CR>\end{<C-o>p}O
 vnoremap <buffer> <localleader>c :s/\(^.*$\)/% \1/g<CR>
 vnoremap <buffer> <localleader>u :s/^% \(.*\)$/\1/g<CR>
 
+"Verbatim comment activate -- assumes start and end markings after \begin|end{comment}
+noremap <buffer> <localleader>ac gg/comment}%start<CR>0x/comment}%end<CR>0x
+noremap <buffer> <localleader>dc gg/comment}%start<CR>0i%<C-C>/comment}%end<CR>0i%<C-C>
+
+
+
 "latex commands:
 " produce a label with the current word and copy it to label register
 noremap <buffer> <localleader>l <Esc>0i\label{<Esc>Ea}<Esc>v%"lyA<Esc> 
@@ -81,3 +87,10 @@ noremap <buffer> <localleader>,udr <Esc>?draft]<CR>dawhx<Esc>''
 
 "Lecture notes
 noremap <buffer> <localleader>hl /labelf{lvf}hy/end{uexerciseO\hyperlink{pasol}{\qed}O
+
+"avm related stuff
+"avm wrappaer
+noremap <localleader>av ggi\documentclass{article}\usepackage{avm}\begin{document}<c-c>Go\end{document}<c-c>
+noremap <localleader>ar /\\begin{avm}<CR>V/end{avm}<CR>dk"+p
+
+

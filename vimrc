@@ -31,7 +31,6 @@ nnoremap <TAB> 0i<TAB><ESC>
 nnoremap Y yg_
 inoremap jk <ESC>
 vnoremap jk <ESC>
-inoremap <C-[> <PageUp>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 
@@ -42,16 +41,13 @@ inoremap [] []<Esc>i
 inoremap <> <><Esc>i
 
 
-
 "" edit vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 "" source vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-
 "" session management
 nnoremap <leader>q :wall<BAR>execute "mksession!" . v:this_session<BAR>qall<CR>
-
 
 "" append selection to a scratch file
 vnoremap <leader>as y:call writefile(split(@0,'\n'),'.scratch')<CR>
@@ -66,12 +62,19 @@ nnoremap <leader>idd  :r!date +\%Y\%m\%d\%t\%a
 nnoremap <leader>idt :r!date +'\%a, \%d \%b \%y -- \%H:\%M'
 nnoremap <leader>idh :r!date +\%F
 
-
 " mutt starts vim with global settings, so this is for switching to mutt-mode
 nnoremap <leader>mm :set textwidth=0<CR>:colors zenburn<CR>
 
 "locally change to the directory of the current file
 noremap <leader>cd :lcd %:p:h<CR>
+
+"yank all to clipboard
+nnoremap <leader>ya :%y+<CR>
+"del all to clipboard
+nnoremap <leader>da :%d+<CR>:w<CR>
+
+
+
 
 " toggle spell check
 nnoremap <leader>s :set spell!<CR>
