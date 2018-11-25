@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/umut/Dropbox/res/github/theoretical-linguistics'
-let g:netrw_dirhist_2='/home/umut/Dropbox/res/cv'
-let g:netrw_dirhist_3='/home/umut/Dropbox/res/cv/duygu-cv'
-let g:netrw_dirhist_4='/home/umut/Dropbox/res/cv/duygu-cv/webpage'
-let g:netrw_dirhist_5='/home/umut/Dropbox/res/cv/duygu-cv'
-let g:netrw_dirhist_6='/home/umut/Dropbox/res/cv'
-let g:netrw_dirhist_7='/home/umut/Dropbox/res'
-let g:netrw_dirhist_8='/home/umut/Dropbox/mn'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/umut/Dropbox/res/github/ccglab/examples'
+let g:netrw_dirhist_2='/home/umut/delphin/eli/examples'
+let g:netrw_dirhist_3='/home/umut/delphin/eli'

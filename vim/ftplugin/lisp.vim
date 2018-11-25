@@ -8,18 +8,23 @@ nnoremap <buffer> <localleader>q :ScreenQuit<CR>
 vnoremap <buffer> <localleader>,e :'<,'>ScreenSend<CR><C-A><TAB>
 
 "evaluate the selection in sbcl shell opened inside vim
-noremap <buffer> <localleader>e y:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
+noremap <buffer> <localleader>e ymw:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 "do the same as above if the start and end of selection has not changed -- it is OK to add lines in between
 noremap <buffer> <localleader>re gvy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 "send the region between marks s and e
 noremap <buffer> <localleader>em mw`sV`ey:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 "send the entire file to internal sbcl 
-noremap <buffer> <localleader>w mwggvGy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
+noremap <buffer> <localleader>w mwggVGy:call writefile(split(@0,'\n'),'.tmp')<CR>:!rlwrap sbcl --load ".tmp"<CR> 
 
 "deletes the form included in the nearest leftward and matching parentheses
 nnoremap <buffer> <localleader>d ?(<CR>v%d
 "copies the form included in the nearest leftward and matching parentheses
 nnoremap <buffer> <localleader>y ?(<CR>v%y
+"folds the form included in the nearest leftward parenthesis at the start of
+"a line and matching parentheses. Works anywhere from within the def*
+nnoremap <buffer> <localleader>f ?^(<CR>V%zf
+"strips the enclosing func
+nnoremap <buffer> <localleader>,t ?(<CR>mz%x`zxdt(
 "comment selection
 vnoremap <buffer> <localleader>c :s/\(^.*$\)/; \1/g<CR>
 "uncomment selection

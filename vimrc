@@ -30,9 +30,16 @@ set incsearch
 nnoremap <TAB> 0i<TAB><ESC>
 nnoremap Y yg_
 inoremap jk <ESC>
-vnoremap jk <ESC>
+"vnoremap jk <ESC>
+inoremap JK <ESC>
+"vnoremap JK <ESC>
+inoremap Jk <ESC>
+"vnoremap Jk <ESC>
+inoremap jK <ESC>
+"vnoremap jK <ESC>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
+nnoremap ı i
 
 "" If you open and close brackets quickly, you end up inside them in insert mode
 inoremap () ()<Esc>i
@@ -74,8 +81,6 @@ nnoremap <leader>ya :%y+<CR>
 nnoremap <leader>da :%d+<CR>:w<CR>
 
 
-
-
 " toggle spell check
 nnoremap <leader>s :set spell!<CR>
 
@@ -86,7 +91,7 @@ nnoremap <leader>h :set hlsearch!<CR>
 nnoremap <leader>rp %x``x
 
 "word count the selection
-vnoremap <leader>wc y:!echo '<C-R>"'\|wc -w 
+vnoremap <leader>wc y:!echo '<C-R>"'\|wc -w<CR>
 
 "remove leading white space in selection
 vnoremap <leader>rs :s/^\s\+//g<CR>
@@ -94,6 +99,8 @@ vnoremap <leader>rs :s/^\s\+//g<CR>
 "paste from clipboard
 nnoremap <leader>p :set paste<CR>"+p:set nopaste<CR>
 
+"turn all tabs to 4 spaces -- useful before pushing to github
+nnoremap <leader>dt GVgg:s/\t/    /g<CR>
 
 "auto commands
 

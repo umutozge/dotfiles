@@ -6,7 +6,7 @@ endif
 let b:did_ftplugin = 1
 
 "set colors
-colorscheme zenburn
+colorscheme apprentice 
 
 "turn on spell check
 setlocal spell
@@ -47,7 +47,7 @@ noremap <buffer> <localleader>ie 0dawi\begin{<C-o>p}<CR>\end{<C-o>p}O
 vnoremap <buffer> <localleader>c :s/\(^.*$\)/% \1/g<CR>
 vnoremap <buffer> <localleader>u :s/^% \(.*\)$/\1/g<CR>
 
-"Verbatim comment activate -- assumes start and end markings after \begin|end{comment}
+"Verbatim comment activate -- assumes %start and %end right after \begin|end{comment}
 noremap <buffer> <localleader>ac gg/comment}%start<CR>0x/comment}%end<CR>0x
 noremap <buffer> <localleader>dc gg/comment}%start<CR>0i%<C-C>/comment}%end<CR>0i%<C-C>
 
