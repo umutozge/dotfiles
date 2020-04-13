@@ -1,0 +1,28 @@
+startup_message off
+autodetach on
+
+#attrcolor b ".I"    # allow bold colors - necessary for some reason
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'   # tell screen how to set colors. AB = background, AF=foreground
+#defbce on    # use current bg color for erased chars
+term screen-256color
+
+#term screen 
+
+caption always '%{= kc} (%t)%-5=%{= .m}%0c'
+
+shell -$SHELL
+
+#chdir "/home/umut"
+#screen -t main
+
+#chdir "/home/umut/res/nt/pol/"
+#screen -t pol 
+#stuff "vim -S pol.ses"
+
+#chdir "/home/umut/res/"
+#screen -t res 
+
+#chdir "/home/umut/fr"
+#screen -t for
+
+#select 0

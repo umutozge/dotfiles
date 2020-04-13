@@ -4,7 +4,12 @@
 
 set encoding=utf-8
 set runtimepath=~/.vim/,$VIMRUNTIME
-
+set t_Co=256
+set background=dark
+colorscheme apprentice
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+"
 " this setting is used by tabfind command, with tabfind you can access any file in the
 " path quickly
 set path=~/.mytex/**,~/res/**,~/.vim/,~/bin/**
@@ -47,6 +52,9 @@ inoremap {} {}<Esc>i
 inoremap [] []<Esc>i
 inoremap <> <><Esc>i
 
+"" when you find yourself inside a paired structure as above do ctrl-l to hop over the closing pair:
+
+inoremap <C-L> la
 
 "" edit vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
