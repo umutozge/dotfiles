@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Xmx2g edu.stanford.nlp.parser.nndep.DependencyParser -outputFormatOptions "lexicalize" -outputFormat "penn,typedDependencies" -model edu/stanford/nlp/models/parser/nndep/english_UD.gz  -textFile depparse.in -outFile depparse.out

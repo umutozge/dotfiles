@@ -6,6 +6,8 @@ set encoding=utf-8
 set runtimepath=~/.vim/,$VIMRUNTIME
 set t_Co=256
 set background=dark
+set tabpagemax=50
+set guioptions-=T
 colorscheme apprentice
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
@@ -46,6 +48,7 @@ inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 nnoremap ı i
 
+
 "" If you open and close brackets quickly, you end up inside them in insert mode
 inoremap () ()<Esc>i
 inoremap {} {}<Esc>i
@@ -60,6 +63,9 @@ inoremap <C-L> la
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 "" source vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" quoting for email
+vnoremap <buffer> <leader>q :s/\(^.*$\)/> \1/g<CR>
 
 "" session management
 nnoremap <leader>q :wall<BAR>execute "mksession!" . v:this_session<BAR>qall<CR>
@@ -76,6 +82,12 @@ nnoremap <leader>idr :r!date +\%b\%t\%d\%t\%Y
 nnoremap <leader>idd  :r!date +\%Y\%m\%d\%t\%a
 nnoremap <leader>idt :r!date +'\%a, \%d \%b \%y -- \%H:\%M'
 nnoremap <leader>idh :r!date +\%F
+
+"" git commands
+
+nnoremap <leader>ga :lcd %:p:h<CR>:!git add %<CR> 
+nnoremap <leader>gr :lcd %:p:h<CR>:!git rm --cached %<CR> 
+
 
 " mutt starts vim with global settings, so this is for switching to mutt-mode
 nnoremap <leader>mm :set textwidth=0<CR>:colors zenburn<CR>
@@ -123,11 +135,11 @@ augroup markdown
 	autocmd FileType markdown colorscheme zenburn 
 augroup END
 
-augroup latex
-	autocmd!
-	autocmd FileType tex inoremap <buffer> ;; <C-c>:!setxkbmap -layout tr<CR>i<right>
-	autocmd FileType tex inoremap <buffer> şş <C-c>:!setxkbmap -layout us<CR>i<right>
-augroup END
+"augroup latex
+"	autocmd!
+"	autocmd FileType tex inoremap <buffer> ;; <C-c>:!setxkbmap -layout tr<CR>i<right>
+"	autocmd FileType tex inoremap <buffer> şş <C-c>:!setxkbmap -layout us<CR>i<right>
+"augroup END
 
 augroup ccg
 	autocmd!
@@ -135,3 +147,8 @@ augroup ccg
 augroup END
 
 hi SpellBad ctermfg=white ctermbg=red
+
+" slimv 
+let g:slimv_swank_cmd = '!tmux new-window -d -n REPL-SBCL "sbcl --load ~/.vim/slime/start-swank.lisp"' 
+let g:lisp_rainbow=1
+

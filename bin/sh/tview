@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pdftotext -f $2 -l $3 -layout -nopgbrk $1 out.txt
+less out.txt
+exit 0

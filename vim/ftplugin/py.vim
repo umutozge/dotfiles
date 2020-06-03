@@ -1,4 +1,7 @@
 
+colorscheme apprentice
+
+
 "(un)comment region
 vmap <buffer> ,c :s/\(^.*$\)/# \1/g<CR>
 vmap <buffer> ,u :s/^# \(.*\)$/\1/g<CR>

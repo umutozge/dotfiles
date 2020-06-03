@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customization>
+<rule pattern="{all}" style="foreground=x:0033cc" />
+<rule pattern="type={null}" style="foreground=red" />
+<rule pattern="type={antecedent}" style="foreground=magenta"/>
+<rule pattern="type={base_indef.}" style="bold=true,italic=true,foreground=red"/>
+<rule pattern="type={anaphor}" style="foreground=blue"/>
+</customization>

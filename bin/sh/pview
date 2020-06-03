@@ -1,0 +1,5 @@
+#!/bin/bash
+pdftk $1 cat $2-$3 output out.pdf
+fbgs -a out.pdf
+rm out.pdf
+exit 0

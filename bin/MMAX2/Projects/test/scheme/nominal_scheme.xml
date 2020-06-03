@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotationscheme>
+
+<attribute id="nominal_attrib_type" name="Type" type="nominal_button">
+<value id="nominal_value_type_null" name="null"/> 
+<value id="nominal_value_type_base" name="base_indef." 
+next="nominal_attrib_case,nominal_attrib_optional,nominal_attrib_weight,nominal_attrib_animacy,nominal_attrib_subord_level,nominal_attrib_focal,nominal_attrib_binding,nominal_attrib_backlink,nominal_attrib_forlink"/>
+<value id="nominal_value_type_antacedent" name="antecedent"/>
+<value id="nominal_value_type_anaphor" name="anaphor" next="nominal_attrib_np_type,nominal_attrib_grammatical_role,nominal_attrib_subord_level,nominal_attrib_topical,nominal_attrib_link_type"/>
+</attribute>
+
+
+<attribute id="nominal_attrib_np_type" name="NP_type" type="nominal_button">
+<value id="nominal_value_pronull" name="pro_null"/>
+<value id="nominal_value_proovert" name="pro_overt"/>
+<value id="nominal_value_demo" name="demons."/>
+<value id="nominal_value_demodef" name="demons_defin"/>
+<value id="nominal_value_def" name="defin."/>
+<value id="nominal_value_indef" name="indef"/>
+</attribute>
+
+<attribute id="nominal_attrib_grammatical_role" name="Grammatical_role" type="nominal_button">
+<value id="nominal_value_grammatical_role_subj" name="subj"/>
+<value id="nominal_value_grammatical_role_obj" name="obj"/>
+<value id="nominal_value_grammatical_role_other" name="other"/>
+</attribute>
+
+
+<attribute id="nominal_attrib_topical" name="Topical" type="nominal_button" text="Indicate whether the NP is topical">
+<value id="nominal_value_topical_no" name="no"/>
+<value id="nominal_value_topical_yes" name="yes"/>
+</attribute>
+
+<attribute id="nominal_attrib_coref_class" name="Coref_class" 
+color="green" width="2" type="markable_set"
+add_to_markableset_text="Mark as coreferential"
+remove_from_markableset_text="Unmark as coreferential">
+<value id="nominal_value_coref_class" name="Coref_class"/>
+</attribute>
+
+<attribute id="nominal_attrib_link_type" name="Link_type" type="nominal_button">
+<value id="nominal_value_link_type_coref" name="coreference" next="nominal_attrib_coref_class"/>
+<value id="nominal_value_link_type_bridge" name="bridging" next="nominal_attrib_bridgeante"/>
+</attribute>
+
+<attribute id="nominal_attrib_bridgeante" name="Bridging_antecedent" type="markable_pointer" 
+color="blue" style="lcurve"
+point_to_markable_text="Mark as bridged antecedent" 
+remove_pointer_to_markable_text="Unmark as bridged antecedent">
+<value id="nominal_value_bridgeante_notset" name="not_set" />
+<value id="nominal_value_bridgeante_set" name="set" next="nominal_attrib_bridgetype"/>
+</attribute>
+
+
+
+
+
+<attribute id="nominal_attrib_case" name="Case_marking" type="nominal_button">
+<value id="nominal_value_case_zero" name="zero"/>
+<value id="nominal_value_case_acc" name="acc"/>
+</attribute>
+
+<attribute id="nominal_attrib_optional" name="Optional" type="nominal_button" text="Indicate whether the Acc-case is optional">
+<value id="nominal_value_optional_yes" name="yes"/>
+<value id="nominal_value_optional_no" name="no"/>
+</attribute>
+
+<attribute id="nominal_attrib_weight" name="Descriptive_content" type="nominal_button" text="If and how the NP is modified">
+<value id="nominal_value_weight_none" name="none"/>
+<value id="nominal_value_weight_adj" name="adj."/>
+<value id="nominal_value_weight_rc" name="rel_clause"/>
+</attribute>
+
+<attribute id="nominal_attrib_animacy" name="Animacy" type="nominal_button" text="Place in the animacy scale">
+<value id="nominal_value_animacy_human" name="human"/>
+<value id="nominal_value_animacy_animate" name="animate"/>
+<value id="nominal_value_animacy_inanim_conc_obj" name="inanim_conc_obj"/>
+<value id="nominal_value_animacy_inanim_undrspc_obj" name="inanim_underspec_obj"/>
+<value id="nominal_value_animacy_abstract" name="abstract"/>
+</attribute>
+
+<attribute id="nominal_attrib_subord_level" name="Level_of_subord." type="nominal_button" text="Level of subordination">
+<value id="nominal_value_subord_level_zero" name="0"/>
+<value id="nominal_value_subord_level_one" name="1"/>
+<value id="nominal_value_subord_level_two" name="2"/>
+</attribute>
+
+<attribute id="nominal_attrib_focal" name="Focal" type="nominal_button" text="Indicate whether the NP is focal or nonfocal">
+<value id="nominal_value_focal_yes" name="yes"/>
+<value id="nominal_value_focal_no" name="no"/>
+</attribute>
+
+<attribute id="nominal_attrib_binding" name="Binding" type="nominal_button" text="Indicate whether the NP is bound or not">
+<value id="nominal_value_binding_none" name="none"/>
+<value id="nominal_value_binding_nom" name="nominal"/>
+<value id="nominal_value_binding_int" name="intens."/>
+</attribute>
+
+<attribute id="nominal_attrib_backlink" name="Backward_linking" type="markable_pointer"
+style="rcurve" color="pink"
+point_to_markable_text="Mark as backward linked to" 
+remove_pointer_to_markable_text="Unmark as backward linked to">
+<value id="nominal_value_backlink_notset" name="not_set"/>
+<value id="nominal_value_backlink_set" name="set" next="nominal_attrib_backlinktype"/>
+</attribute>
+
+<attribute id="nominal_attrib_backlinktype" name="Backward_linking_type" type="nominal_button" text="Indicate the relation of the NP to the previous discourse">
+<value id="nominal_value_backlinktype_null" name="null"/>
+<value id="nominal_value_backlinktype_partsame" name="partitive_same"/>
+<value id="nominal_value_backlinktype_partdiff" name="partitive_diff"/>
+<value id="nominal_value_backlinktype_bridged" name="bridged" next="nominal_attrib_bridgetype"/>
+<value id="nominal_value_backlinktype_cataph" name="cataphoric_anteced."/>
+</attribute>
+
+<attribute id="nominal_attrib_forlink" name="Forward_linking" type="nominal_button">
+<value id="nominal_value_forlink_none" name="none"/>
+<value id="nominal_value_forlink_elab" name="elaboration"/>
+<value id="nominal_value_forlink_anaph" name="anaphora" next="nominal_attrib_coref_class"/>
+<value id="nominal_value_forlink_elab-anaph" name="elab_anaph" next="nominal_attrib_coref_class"/>
+</attribute>
+
+<attribute id="nominal_attrib_bridgetype" name="Bridge_type" type="nominal_button" text="Choose bridging type">
+<value id="nominal_value_bridgetype_null" name="null"/>
+<value id="nominal_value_bridgetype_part-whole" name="part-whole"/>
+<value id="nominal_value_bridgetype_cause-effect" name="cause-effect"/>
+<value id="nominal_value_bridgetype_entity-attrib" name="entity-attribute"/>
+<value id="nominal_value_bridgetype_other" name="other"/>
+</attribute>
+
+</annotationscheme>

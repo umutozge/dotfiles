@@ -1,0 +1,92 @@
+#!/usr/bin/env python
+
+import sys
+import re
+from mypy.datatools import Frame
+
+
+def consItemDict(file):
+	retval = dict()
+	lines = file.readlines()	
+	while True:
+		try:
+			line = lines.pop(0)
+			m = imagepat.match(line)
+			if m:
+				item = m.group(1) 	
+				while lines[0].find('NP1Onset') != -1:
+					lines.pop(0)
+				m = np1pat.match(line[0])
+				np1Onset = m.group(1)
+				while lines[0].find('AuxOnset') != -1:
+					lines.pop(0)
+				m = auxpat.match(line[0])
+				auxOnset = m.group(1)
+				while lines[0].find('VerbOnset') != -1:
+					lines.pop(0)
+				m = verbpat.match(line[0])
+				verbOnset = m.group(1)
+				while lines[0].find('NP2Onset') != -1:
+					lines.pop(0)
+				m = np2pat.match(line[0])
+				np2Onset = m.group(1)
+				while lines[0].find('NP2Offset') != -1:
+					lines.pop(0)
+				m = np2offpat.match(line[0])
+				np2Offset = m.group(1)
+				while lines[0].find('QuadSlide.OnsetTime') != -1:
+					lines.pop(0)
+				m = quadpat.match(line[0])
+				quadOnset = m.group(1)
+				hitFunc = consHitTest(np1Onset,auxOnset,verbOnset,np2Onset,np2Offset,quadOnset)
+				print item
+				retval[item]=hitFunc
+			
+		except IndexError:
+			return retval
+		
+
+imagepat= re.compile('.*UpLeftImage: (.*)\.bmp')
+np1pat = re.compile('.*NP1Onset: (.*)')
+auxpat = re.compile('.*AuxOnset: (.*)')
+verbpat = re.compile('.*VerbOnset: (.*)')
+np2pat = re.compile('.*NP2Onset: (.*)')
+np2offpat = re.compile('.*NP2Offset: (.*)')
+quadpat = re.compile('.*QuadSlide.OnsetTime: (.*)')
+
+
+
+for file in sys.argv[1:]:
+
+	incsv = open(file,'r')
+	intxt = open(file[:-4]+'.text','r')
+	
+	itemDict = consItemDict(intxt)
+
+
+
+
+def consHitTest(np1,aux,verb,np2,np2off,quad):
+	print np1, aux,verb,np2,np2off,quad
+
+"""
+read csv, 
+from filename read txt
+
+parse txt to collect the params:
+
+	NP1Onset
+	AuxOnset
+	VerbOnset
+	NP2Onset
+	NP2Offset
+	QuadslideOnset
+
+construct a dictionary for UpLeftImage X hittest functions
+
+
+Then define a hittest function that takes parameters and gaze RTTime and returns TWindow
+
+Iterate trough csv and assign new TWs by feeding RTTIme to Hittest in each iteration.
+
+"""

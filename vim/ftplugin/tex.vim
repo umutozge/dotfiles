@@ -29,7 +29,7 @@ noremap <buffer> <localleader>,r :w<CR>:mkview<CR>:lcd %:p:h<CR>::call Typeset(0
 noremap <buffer> <localleader>b :w<CR>:call Bibtex()<CR>
 
 "view the pdf by evince
-noremap <buffer> <localleader>v :!evince %pdf&<CR>
+noremap <buffer> <localleader>v :!evince &> /dev/null %pdf&<CR>
 
 "verbatim
 inoremap <buffer> <localleader>V \Verb++i
@@ -51,6 +51,9 @@ vnoremap <buffer> <localleader>u :s/^% \(.*\)$/\1/g<CR>
 noremap <buffer> <localleader>ac gg/comment}%start<CR>0x/comment}%end<CR>0x
 noremap <buffer> <localleader>dc gg/comment}%start<CR>0i%<C-C>/comment}%end<CR>0i%<C-C>
 
+"Quotation
+nnoremap <buffer> <localleader>aq i``''<Esc>hi
+inoremap <buffer> <localleader>an \ldots 
 
 
 "latex commands:
@@ -74,7 +77,7 @@ inoremap <buffer> <localleader>s \sysm{}
 nnoremap <buffer> <localleader>m i$$<Esc>i
 inoremap <buffer> <localleader>m $$<Esc>i
 nnoremap <buffer> <localleader>n i\{\}<Esc>hi 
-inoremap <buffer> <localleader>n \{\}<Esc>hi 
+"inoremap <buffer> <localleader>n \{\}<Esc>hi 
 
 
 "Beamer related commands
@@ -88,9 +91,7 @@ noremap <buffer> <localleader>,udr <Esc>?draft]<CR>dawhx<Esc>''
 "Lecture notes
 noremap <buffer> <localleader>hl /labelf{lvf}hy/end{uexerciseO\hyperlink{pasol}{\qed}O
 
-"avm related stuff
+"avm
 "avm wrappaer
 noremap <localleader>av ggi\documentclass{article}\usepackage{avm}\begin{document}<c-c>Go\end{document}<c-c>
 noremap <localleader>ar /\\begin{avm}<CR>V/end{avm}<CR>dk"+p
-
-

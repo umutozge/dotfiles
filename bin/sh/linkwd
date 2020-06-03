@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -d ~/wd ]
+then
+rm ~/wd
+ln -s `pwd` ~/wd
+else
+ln -s `pwd` ~/wd
+fi
+

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE common_paths>
+<common_paths>
+<basedata_path>base/</basedata_path>
+<scheme_path>scheme/</scheme_path>
+<style_path>styles/</style_path>
+<customization_path>custom/</customization_path>
+<markable_path>markables/</markable_path>
+<views>
+<stylesheet>default_style.xsl</stylesheet>
+</views>
+<annotations>
+<level name="nominal" schemefile="nominal_scheme.xml" customization_file="nominal_customization.xml">$_nominal_level.xml</level>
+<level name="discourse" schemefile="discourse_scheme.xml" customization_file="discourse_customization.xml">$_discourse_level.xml</level>
+</annotations>
+</common_paths>

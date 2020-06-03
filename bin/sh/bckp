@@ -1,0 +1,24 @@
+#!/bin/bash
+#making sure that the backup device is mounted 
+#on the right place, in the right way
+
+mount | grep  -q '/dev/sdb1 .* /media/disk'   
+
+if test $? -eq 0 
+then
+	echo -n /dev/sdb1 is mounted on /media/disk, unmounting... 
+	umount /media/disk
+	echo Done.
+else
+	mount | grep -q '/dev/sdb1 .* /media/bckp'  
+	if test ! $? -eq 0
+	then
+		echo -n Mounting the backup device...
+		mount /media/bckp 
+		echo Done. 
+	fi
+fi
+
+unison -ui text bckp
+
+exit 0

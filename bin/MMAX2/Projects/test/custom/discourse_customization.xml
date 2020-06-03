@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customization>
+<rule pattern="{all}" style="foreground=white"/>
+<rule pattern="status={untoched}" style="foreground=lightGray"/>
+<rule pattern="status={include}" style="foreground=black"/>
+<rule pattern="status={exclude}" style="foreground=pink"/>
+<rule pattern="status={incomplete}" style="foreground=red"/>
+</customization>

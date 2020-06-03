@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+<markables xmlns="www.eml.org/NameSpaces/nominal">
+<markable id="markable_7" span="word_2..word_3" mmax_level="nominal"  type="antecedent" />
+<markable id="markable_6" span="word_70..word_71" grammatical_role="other"  coref_class="set_0"  mmax_level="nominal"  np_type="defin."  topical="yes"  level_of_subord.="0"  type="anaphor"  link_type="coreference" />
+<markable id="markable_5" span="word_32..word_35" animacy="abstract"  focal="yes"  backward_linking_type="null"  case_marking="zero"  type="base_indef."  backward_linking="markable_7"  forward_linking="anaphora"  descriptive_content="adj."  coref_class="set_0"  mmax_level="nominal"  optional="yes"  level_of_subord.="0"  binding="none" />
+</markables>

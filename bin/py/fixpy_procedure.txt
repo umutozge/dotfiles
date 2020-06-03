@@ -1,0 +1,3 @@
+
+
+=Reads a directory containing .gazedata and a .txt file for each experimental session. (.gazedata file contains the look information, .txt contains the meta information for the session like participant, group, onset, offset times etc.)

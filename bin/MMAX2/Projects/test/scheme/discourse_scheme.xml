@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotationscheme>
+
+<attribute id="d_attrib_status" name="Status" type="nominal_button" text="Set inclusion status">
+<value id="d_value_status_untouched" name="untoched"/>
+<value id="d_value_status_include" name="include" next="d_attrib_notes"/>
+<value id="d_value_status_exclude" name="exclude" next="d_attrib_notes"/>
+<value id="d_value_status_incomplete" name="incomplete" next="d_attrib_notes"/>
+</attribute>
+
+<attribute id="d_attrib_notes" name="Notes" type="freetext" text="Take your notes">
+<value id="d_value_notes" name="d_attrib_notes"/>
+</attribute>
+
+</annotationscheme>

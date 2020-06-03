@@ -12,4 +12,3 @@ map ,a "qpfnxxxxihreflli#/h2lllvf(hhdk/><lPjdd
 map ,p v/Forumlllld?h2nllpau?h2lllvey?namellllpguuVj"qy
 map ,c :w<CR>ggVG"+y
 
-
