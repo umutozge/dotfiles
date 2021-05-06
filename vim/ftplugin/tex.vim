@@ -1,15 +1,17 @@
 "Only do this when not done yet for this buffer
-if exists("b:did_ftplugin")
-	finish
-endif
+"if exists("b:did_ftplugin")
+"	finish
+"endif
 
-let b:did_ftplugin = 1
+"let b:did_ftplugin = 1
 
 "set colors
-colorscheme apprentice 
+"colorscheme apprentice 
 
 "turn on spell check
 setlocal spell
+
+set indentexpr=
 
 "Change to the directory of the opened file
 lcd %:p:h

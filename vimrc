@@ -4,11 +4,11 @@
 
 set encoding=utf-8
 set runtimepath=~/.vim/,$VIMRUNTIME
-set t_Co=256
-set background=dark
+"set t_Co=256
+"set background=dark
 set tabpagemax=50
 set guioptions-=T
-colorscheme apprentice
+"colorscheme apprentice
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 "
@@ -36,24 +36,25 @@ set incsearch
 
 nnoremap <TAB> 0i<TAB><ESC>
 nnoremap Y yg_
-inoremap jk <ESC>
+"inoremap jk <ESC>
 "vnoremap jk <ESC>
-inoremap JK <ESC>
+"inoremap JK <ESC>
 "vnoremap JK <ESC>
-inoremap Jk <ESC>
+"inoremap Jk <ESC>
 "vnoremap Jk <ESC>
-inoremap jK <ESC>
+"inoremap jK <ESC>
 "vnoremap jK <ESC>
 inoremap <C-F> <Right>
 inoremap <C-B> <Left>
 nnoremap ı i
-
+				
 
 "" If you open and close brackets quickly, you end up inside them in insert mode
 inoremap () ()<Esc>i
 inoremap {} {}<Esc>i
 inoremap [] []<Esc>i
 inoremap <> <><Esc>i
+inoremap <bar><bar> <bar><bar><Esc>i
 
 "" when you find yourself inside a paired structure as above do ctrl-l to hop over the closing pair:
 
@@ -112,6 +113,7 @@ nnoremap <leader>rp %x``x
 
 "word count the selection
 vnoremap <leader>wc y:!echo '<C-R>"'\|wc -w<CR>
+nnoremap <leader>wc :!wc -w %<CR>
 
 "remove leading white space in selection
 vnoremap <leader>rs :s/^\s\+//g<CR>
@@ -131,9 +133,9 @@ augroup python
 	autocmd FileType python iabbrev <buffer> eliff elif:<left>
 augroup END
 
-augroup markdown
-	autocmd FileType markdown colorscheme zenburn 
-augroup END
+"augroup markdown
+"	autocmd FileType markdown colorscheme zenburn 
+"augroup END
 
 "augroup latex
 "	autocmd!

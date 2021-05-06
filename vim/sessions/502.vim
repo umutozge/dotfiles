@@ -1,21 +1,21 @@
 let SessionLoad = 1
 if &cp | set nocp | endif
 nnoremap 	 0i	
-noremap ,ar /\\begin{avm}V/end{avm}dk"+p
-noremap ,av ggi\documentclass{article}\usepackage{avm}\begin{document}Go\end{document}
-map ,c :wggVG"+y
-map ,p v/Forumlllld?h2nllpau?h2lllvey?namellllpguuVj"qy
-map ,a "qpfnxxxxihreflli#/h2lllvf(hhdk/><lPjdd
-map ,j bi<a href="+pi target="_blank">A</a>A
-vmap ,,h yi<a href=A target="_blank">pa</a>kkkJJJ
-vmap ,s :s/\(.*>\)\(http:\/\/[^\/]*\/\).*$/\1\2<\/a>/g
-map ,h /Kaynak:j"+pv,,hV,s
-map ,ap a&apos;
-map ,pp i<p></p>hhhi
-map ,bq i<blockquote></blockquote>ki
-map ,q i&quot;&quot;hhhhhi
-nnoremap ,i Ji
 nnoremap ,b `wzz20
+nnoremap ,i Ji
+map ,q i&quot;&quot;hhhhhi
+map ,bq i<blockquote></blockquote>ki
+map ,pp i<p></p>hhhi
+map ,ap a&apos;
+map ,h /Kaynak:j"+pv,,hV,s
+vmap ,s :s/\(.*>\)\(http:\/\/[^\/]*\/\).*$/\1\2<\/a>/g
+vmap ,,h yi<a href=A target="_blank">pa</a>kkkJJJ
+map ,j bi<a href="+pi target="_blank">A</a>A
+map ,a "qpfnxxxxihreflli#/h2lllvf(hhdk/><lPjdd
+map ,p v/Forumlllld?h2nllpau?h2lllvey?namellllpguuVj"qy
+map ,c :wggVG"+y
+noremap ,av ggi\documentclass{article}\usepackage{avm}\begin{document}Go\end{document}
+noremap ,ar /\\begin{avm}V/end{avm}dk"+p
 nnoremap Y yg_
 nnoremap \dt GVgg:s/\t/    /g
 nnoremap \p :set paste"+p:set nopaste
@@ -91,14 +91,15 @@ badd +1 assignments/cogs502-assignment-02.tex
 badd +1 assignments/test.lisp
 badd +105 assignments/cogs502-assignment-03.tex
 badd +4 assignments/cogs502-assignment-05.tex
-badd +1 assignments/cogs502-assignment-06.tex
+badd +33 assignments/cogs502-assignment-06.tex
 badd +117 code/iteration.lisp
 badd +1 ~/Dropbox/res/cr/ex.pool
 badd +44 assignments/cogs502-assignment-07.tex
 badd +97 code/assignment-07.lisp
 badd +1 code/assignment-08.lisp
 badd +80 code/assignment-06.lisp
-badd +0 code/assignment-05.lisp
+badd +1 code/assignment-05.lisp
+badd +0 assignments/cogs502-assignment-12.tex
 argglobal
 silent! argdel *
 argadd README.md
@@ -220,7 +221,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 22 - ((21 * winheight(0) + 33) / 67)
+let s:l = 22 - ((15 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -381,7 +382,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1162 - ((39 * winheight(0) + 33) / 67)
+let s:l = 1162 - ((29 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -506,153 +507,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 109 - ((45 * winheight(0) + 33) / 67)
+let s:l = 109 - ((33 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 109
 normal! 0
 lcd ~/Dropbox/res/github/symbols-and-programming/assignments
-tabedit ~/Dropbox/res/github/symbols-and-programming/code/assignment-08.lisp
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-vnoremap <buffer> ,p meoi(`ela)
-vnoremap <buffer> ,u :s/^; \(.*\)$/\1/g
-vnoremap <buffer> ,c :s/\(^.*$\)/; \1/g
-nnoremap <buffer> ,,t ?(mz%x`zxdt(
-nnoremap <buffer> ,f ?^(V%zf
-nnoremap <buffer> ,y ?(v%y
-nnoremap <buffer> ,d ?(v%d
-noremap <buffer> ,w mwggVGy:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,em mw`sV`ey:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,re gvy:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,e ymw:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-vnoremap <buffer> ,,e :'<,'>ScreenSend	
-nnoremap <buffer> ,q :ScreenQuit
-nnoremap <buffer> ,s :ScreenShell rlwrap sbcl 
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=:;;;,:;;,sr:#|,mb:|,ex:|#,:;
-setlocal commentstring=;%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=^\\s*(def\\k*
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'lisp'
-setlocal filetype=lisp
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal lisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-set spell
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'lisp'
-setlocal syntax=lisp
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 33) / 67)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd ~/Dropbox/res/github/symbols-and-programming/assignments
-tabedit ~/Dropbox/res/github/symbols-and-programming/assignments/cogs502-assignment-06.tex
+tabedit ~/Dropbox/res/github/symbols-and-programming/assignments/cogs502-assignment-12.tex
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -807,153 +669,14 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 33 - ((32 * winheight(0) + 33) / 67)
+let s:l = 38 - ((26 * winheight(0) + 33) / 67)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-33
+38
 normal! 0
 lcd ~/Dropbox/res/github/symbols-and-programming/assignments
-tabedit ~/Dropbox/res/github/symbols-and-programming/code/assignment-05.lisp
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-vnoremap <buffer> ,p meoi(`ela)
-vnoremap <buffer> ,u :s/^; \(.*\)$/\1/g
-vnoremap <buffer> ,c :s/\(^.*$\)/; \1/g
-nnoremap <buffer> ,,t ?(mz%x`zxdt(
-nnoremap <buffer> ,f ?^(V%zf
-nnoremap <buffer> ,y ?(v%y
-nnoremap <buffer> ,d ?(v%d
-noremap <buffer> ,w mwggVGy:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,em mw`sV`ey:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,re gvy:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-noremap <buffer> ,e ymw:call writefile(split(@0,'\n'),'.tmp'):!rlwrap sbcl --load ".tmp" 
-vnoremap <buffer> ,,e :'<,'>ScreenSend	
-nnoremap <buffer> ,q :ScreenQuit
-nnoremap <buffer> ,s :ScreenShell rlwrap sbcl 
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=:;;;,:;;,sr:#|,mb:|,ex:|#,:;
-setlocal commentstring=;%s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=^\\s*(def\\k*
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'lisp'
-setlocal filetype=lisp
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=cq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,+,-,*,/,%,<,=,>,:,$,?,!,@-@,94
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal lisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal nomodeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-setlocal nonumber
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=8
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-set spell
-setlocal spell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'lisp'
-setlocal syntax=lisp
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 33) / 67)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd ~/Dropbox/res/github/symbols-and-programming/code
-tabnext 6
+tabnext 4
 set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
