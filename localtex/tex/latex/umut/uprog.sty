@@ -12,7 +12,7 @@
 \RequirePackage{xcolor}
 \definecolor{silver}{rgb}{0.95,0.95,0.95}
 %\definecolor{cbg}{RGB}{240,230,140}
-\definecolor{cbg}{RGB}{242,242,242}
+\definecolor{cbg}{RGB}{253,253,253}
 %\definecolor{cbg}{RGB}{255,255,255}
 
 \RequirePackage[cache=false]{minted}
@@ -25,7 +25,7 @@
 {%
 \VerbatimEnvironment
 \begin{ucodeframe}
-\begin{minted}[tabsize=4,obeytabs]{lisp}%
+\begin{minted}[tabsize=4,obeytabs,linenos]{lisp}%
 }
 {%
 \end{minted}%
@@ -33,11 +33,13 @@
 }
 
 \newenvironment{ucodeframe}
-{
-\begin{mdframed}[backgroundcolor=cbg]
+{%
+\begin{mdframed}[backgroundcolor=cbg]%
+\begin{minipage}[t]{\textwidth}%
 }
-{
-\end{mdframed}
+{%
+\end{minipage}%
+\end{mdframed}%
 }
 
 

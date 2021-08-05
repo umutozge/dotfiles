@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.3)  27 FEB 2018 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.1.8)  29 APR 2018 17:45
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **uprog.sty
 (/home/umut/.mytex/tex/latex/umut/uprog.sty
 LaTeX2e <2017/01/01> patch level 3
-Babel <3.9r> and hyphenation patterns for 3 language(s) loaded.
+Babel <3.9r> and hyphenation patterns for 30 language(s) loaded.
 
 LaTeX Warning: You have requested package `',
                but the package provides `uprog'.
@@ -263,11 +263,11 @@ If that doesn't work, type  X <return>  to quit.
 
  
 Here is how much of TeX's memory you used:
- 3938 strings out of 494945
- 74586 string characters out of 6181033
- 137744 words of memory out of 5000000
- 7225 multiletter control sequences out of 15000+600000
+ 3938 strings out of 494358
+ 74586 string characters out of 6164528
+ 139144 words of memory out of 5000000
+ 7262 multiletter control sequences out of 15000+600000
  3808 words of font info for 15 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 350 hyphenation exceptions out of 8191
  47i,1n,42p,850b,65s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
