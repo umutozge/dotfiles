@@ -1,0 +1,62 @@
+from subprocess import Popen, PIPE
+import sys
+
+
+class Flookup():
+
+	def __init__(self, direction='up', machine=None):
+
+		# set the transducer machine
+		if not machine:
+			sys.stderr.write("\nFlookup requires a machine path as string: Flookup(machine='my_machine.fst')")
+			sys.stderr.write("\nExiting...\n")
+			sys.exit()
+		else:
+			self.machine = machine
+
+		self.process = self._start(direction,machine)
+	
+	def _start(self,direction,machine):
+		if direction == 'up':
+			dir = []
+		elif direction == 'down':
+			dir = ['-i']
+		else:
+			sys.stderr.write("\nFlookup: unrecognized direction specification %s' % direction")
+			sys.stderr.write("\nExiting...\n")
+			sys.exit()
+
+		proc = Popen(['flookup'] + dir + ['-b','-w',' ',machine], stdin=PIPE, stdout=PIPE)
+		sys.stderr.write('\nFlookup: process successfully started.\n')
+		return proc
+
+	def stop(self):
+		self.process.stdin.close()
+		self.process.stdout.close()
+		self.process.wait()
+		sys.stderr.write("\nflookup finished with return code %d\n" % self.process.returncode)
+
+	def parse(self, word):
+		word = bytes(word.strip()+'\n', "utf-8")
+		self.process.stdin.write(word)
+		self.process.stdin.flush()
+		window = ['',''] 
+		acc = ''
+		while True:
+			b = self.process.stdout.read(1)
+			char = b.decode('utf-8')
+			window[0], window[1] = window[1], char
+			if window == ['\n',' ']:
+				break
+			elif window == ['+','?']:
+				self.process.stdout.read(2)
+				return [] 
+			acc = acc + char
+		return [x.split('\t')[1] for x in acc.strip().split('\n')]
+
+if __name__ == '__main__':
+	f = Flookup(machine='/home/umut/bin/fst/trmorph.fst')
+	print(f.parse('araba'))
+	print(f.parse('asfdad'))
+	print(f.parse('ev'))
+	f.stop()

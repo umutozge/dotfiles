@@ -8,8 +8,6 @@ do
 	sum=$(echo "$sum + $x" | bc -l)
 done
 
-sed_str="s/$2(.*)\.lisp/\1/p"
-
-tmp=$(echo $1 | sed -nr $sed_str)
+tmp=$(echo $1 | sed -nr 's/MT2-(.*)\.lisp/\1/p')
 
 echo -e "$tmp\t$sum"
