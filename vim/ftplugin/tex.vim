@@ -46,8 +46,8 @@ vnoremap <buffer> <localleader>p meo<Esc>i{<Esc>`ela}<Esc>
 noremap <buffer> <localleader>ie 0dawi\begin{<C-o>p}<CR>\end{<C-o>p}O
 
 "(un)comment region
-vnoremap <buffer> <localleader>c :s/\(^.*$\)/% \1/g<CR>
-vnoremap <buffer> <localleader>u :s/^% \(.*\)$/\1/g<CR>
+vnoremap <buffer> <localleader>c :s/^/#/<CR>
+vnoremap <buffer> <localleader>u :s/^#//<CR>
 
 "Verbatim comment activate -- assumes %start and %end right after \begin|end{comment}
 noremap <buffer> <localleader>ac gg/comment}%start<CR>0x/comment}%end<CR>0x
